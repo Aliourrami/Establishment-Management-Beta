@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Retyped.es2015.symbol.wellknown</name>
+    </assembly>
+    <members>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.hasInstance">
+            <summary>
+            A method that determines if a constructor object recognizes an object as one of the
+            constructor’s instances. Called by the semantics of the instanceof operator.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.isConcatSpreadable">
+            <summary>
+            A Boolean value that if true indicates that an object should flatten to its array elements
+            by Array.prototype.concat.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.match">
+            <summary>
+            A regular expression method that matches the regular expression against a string. Called
+            by the String.prototype.match method.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.replace">
+            <summary>
+            A regular expression method that replaces matched substrings of a string. Called by the
+            String.prototype.replace method.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.search">
+            <summary>
+            A regular expression method that returns the index within a string that matches the
+            regular expression. Called by the String.prototype.search method.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.species">
+            <summary>
+            A function valued property that is the constructor function that is used to create
+            derived objects.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.split">
+            <summary>
+            A regular expression method that splits a string at the indices that match the regular
+            expression. Called by the String.prototype.split method.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.toPrimitive">
+            <summary>
+            A method that converts an object to a corresponding primitive value.
+            Called by the ToPrimitive abstract operation.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.toStringTag">
+            <summary>
+            A String value that is used in the creation of the default string description of an object.
+            Called by the built-in method Object.prototype.toString.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.SymbolConstructor.unscopables">
+            <summary>
+            An Object whose own property names are property names that are excluded from the 'with'
+            environment bindings of the associated objects.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.Array`1.Symbol_unscopables">
+            <summary>
+            Returns an object whose properties have the value 'true'
+            when they will be absent when used in a 'with' statement.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.Date.Symbol_toPrimitive">
+            <summary>
+            Converts a Date object to a string.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.Date.Symbol_toPrimitive2">
+            <summary>
+            Converts a Date object to a string.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.Date.Symbol_toPrimitive3">
+            <summary>
+            Converts a Date object to a number.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.Date.Symbol_toPrimitive4">
+            <summary>
+            Converts a Date object to a string or number.
+            </summary>
+            <param name = "hint">The strings "number", "string", or "default" to specify what primitive to return.</param>
+            <returns>A number if 'hint' was "number", a string if 'hint' was "string" or "default".</returns>
+            <exception cref = "!:TypeError">If 'hint' was given something other than "number", "string", or "default".</exception>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.Function.Symbol_hasInstance">
+            <summary>
+            Determines whether the given value inherits from this function if this function was used
+            as a constructor function.
+            A constructor function can control which objects are recognized as its instances by
+            'instanceof' by overriding this method.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.RegExp.Symbol_match">
+            <summary>
+            Matches a string with this regular expression, and returns an array containing the results of
+            that search.
+            </summary>
+            <param name = "string">A string to search within.</param>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.RegExp.Symbol_replace">
+            <summary>
+            Replaces text in a string, using this regular expression.
+            </summary>
+            <param name = "string">
+            A String object or string literal whose contents matching against
+            this regular expression will be replaced
+            </param>
+            <param name = "replaceValue">
+            A String object or string literal containing the text to replace for every
+            successful match of this regular expression.
+            </param>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.RegExp.Symbol_replace2">
+            <summary>
+            Replaces text in a string, using this regular expression.
+            </summary>
+            <param name = "string">
+            A String object or string literal whose contents matching against
+            this regular expression will be replaced
+            </param>
+            <param name = "replacer">A function that returns the replacement text.</param>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.RegExp.Symbol_search">
+            <summary>
+            Finds the position beginning first substring match in a regular expression search
+            using this regular expression.
+            </summary>
+            <param name = "string">The string to search within.</param>
+        </member>
+        <member name="P:Retyped.es2015_symbol_wellknown.RegExp.Symbol_split">
+            <summary>
+            Returns an array of substrings that were delimited by strings in the original input that
+            match against this regular expression.
+            If the regular expression contains capturing parentheses, then each time this
+            regular expression matches, the results (including any undefined results) of the
+            capturing parentheses are spliced.
+            </summary>
+            <param name = "string">string value to split</param>
+            <param name = "limit">
+            if not undefined, the output array is truncated so that it contains no more
+            than 'limit' elements.
+            </param>
+        </member>
+        <member name="M:Retyped.es2015_symbol_wellknown.String.match(Retyped.es2015_symbol_wellknown.String.matchConfig)">
+            <summary>
+            Matches a string an object that supports being matched against, and returns an array containing the results of that search.
+            </summary>
+            <param name = "matcher">An object that supports being matched against.</param>
+        </member>
+        <member name="M:Retyped.es2015_symbol_wellknown.String.replace(Retyped.es2015_symbol_wellknown.String.replaceConfig,System.String)">
+            <summary>
+            Replaces text in a string, using an object that supports replacement within a string.
+            </summary>
+            <param name = "searchValue">A object can search for and replace matches within a string.</param>
+            <param name = "replaceValue">A string containing the text to replace for every successful match of searchValue in this string.</param>
+        </member>
+        <member name="M:Retyped.es2015_symbol_wellknown.String.replace(Retyped.es2015_symbol_wellknown.String.replaceConfig2,Retyped.es2015_symbol_wellknown.String.replaceFn)">
+            <summary>
+            Replaces text in a string, using an object that supports replacement within a string.
+            </summary>
+            <param name = "searchValue">A object can search for and replace matches within a string.</param>
+            <param name = "replacer">A function that returns the replacement text.</param>
+        </member>
+        <member name="M:Retyped.es2015_symbol_wellknown.String.search(Retyped.es2015_symbol_wellknown.String.searchConfig)">
+            <summary>
+            Finds the first substring match in a regular expression search.
+            </summary>
+            <param name = "searcher">An object which supports searching within a string.</param>
+        </member>
+        <member name="M:Retyped.es2015_symbol_wellknown.String.split(Retyped.es2015_symbol_wellknown.String.splitConfig)">
+            <summary>
+            Split a string into substrings using the specified separator and return them as an array.
+            </summary>
+            <param name = "splitter">An object that can split a string.</param>
+        </member>
+        <member name="M:Retyped.es2015_symbol_wellknown.String.split(Retyped.es2015_symbol_wellknown.String.splitConfig,System.Double)">
+            <summary>
+            Split a string into substrings using the specified separator and return them as an array.
+            </summary>
+            <param name = "splitter">An object that can split a string.</param>
+            <param name = "limit">A value used to limit the number of elements returned in the array.</param>
+        </member>
+    </members>
+</doc>

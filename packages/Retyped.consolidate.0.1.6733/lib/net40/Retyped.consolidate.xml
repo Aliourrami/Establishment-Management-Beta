@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Retyped.consolidate</name>
+    </assembly>
+    <members>
+        <member name="P:Retyped.consolidate.Consolidate.requires">
+            <summary>
+            expose the instance of the engine
+            </summary>
+        </member>
+        <member name="M:Retyped.consolidate.Consolidate.clearCache">
+            <summary>
+            Clear the cache.
+            @api public
+            </summary>
+        </member>
+    </members>
+</doc>

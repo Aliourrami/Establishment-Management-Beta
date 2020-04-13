@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Unit</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:System.Unit" -->
+        <member name="P:System.Unit.Default">
+            <summary>
+            Gets the single <see cref="T:System.Unit"/> value.
+            </summary>
+        </member>
+        <member name="M:System.Unit.Equals(System.Unit)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Unit"/> value is equal to the current <see cref="T:System.Unit"/>. Because <see cref="T:System.Unit"/> has a single value, this always returns <c>true</c>.
+            </summary>
+            <param name="other">An object to compare to the current <see cref="T:System.Unit"/> value.</param>
+            <returns>Because <see cref="T:System.Unit"/> has a single value, this always returns <c>true</c>.</returns>
+        </member>
+        <member name="M:System.Unit.Equals(System.Object)">
+            <summary>
+            Returns true for Unit, null and empty ValueTuple.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:System.Unit.GetHashCode" -->
+        <member name="M:System.Unit.ToString">
+            <summary>
+            Returns ().
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:System.Unit.CompareTo(System.ValueTuple)" -->
+        <!-- Badly formed XML comment ignored for member "M:System.Unit.CompareTo(System.Unit)" -->
+        <!-- Badly formed XML comment ignored for member "M:System.Unit.Equals(System.ValueTuple)" -->
+        <member name="M:System.Unit.op_Equality(System.Unit,System.Unit)">
+            <summary>
+            Determines whether the two specified <see cref="T:System.Unit"/> values are equal. Because <see cref="T:System.Unit"/> has a single value, this always returns <c>true</c>.
+            </summary>
+            <param name="first">The first <see cref="T:System.Unit"/> value to compare.</param>
+            <param name="second">The second <see cref="T:System.Unit"/> value to compare.</param>
+            <returns>Because <see cref="T:System.Unit"/> has a single value, this always returns <c>true</c>.</returns>
+        </member>
+        <member name="M:System.Unit.op_Equality(System.Unit,System.ValueTuple)">
+            <summary>
+            Returns true. Unit is always equal to empty tuple.
+            </summary>
+        </member>
+        <member name="M:System.Unit.op_Equality(System.ValueTuple,System.Unit)">
+            <summary>
+            Returns true. Unit is always equal to empty tuple.
+            </summary>
+        </member>
+        <member name="M:System.Unit.op_Inequality(System.Unit,System.Unit)">
+            <summary>
+            Determines whether the two specified <see cref="T:System.Unit"/> values are not equal. 
+            Because <see cref="T:System.Unit"/> has a single value, this always returns <c>false</c>.
+            </summary>
+            <param name="first">The first <see cref="T:System.Unit"/> value to compare.</param>
+            <param name="second">The second <see cref="T:System.Unit"/> value to compare.</param>
+            <returns>Because <see cref="T:System.Unit"/> has a single value, this always returns <c>false</c>.</returns>
+        </member>
+        <member name="M:System.Unit.op_Inequality(System.Unit,System.ValueTuple)">
+            <summary>
+            Returns false;
+            </summary>
+        </member>
+        <member name="M:System.Unit.op_Inequality(System.ValueTuple,System.Unit)">
+            <summary>
+            Returns false;
+            </summary>
+        </member>
+        <member name="M:System.Unit.op_GreaterThan(System.Unit,System.Unit)">
+            <summary>
+            Returns false;
+            </summary>
+        </member>
+        <member name="M:System.Unit.op_GreaterThanOrEqual(System.Unit,System.Unit)">
+            <summary>
+            Returns false;
+            </summary>
+        </member>
+        <member name="M:System.Unit.op_LessThan(System.Unit,System.Unit)">
+            <summary>
+            Returns false;
+            </summary>
+        </member>
+        <member name="M:System.Unit.op_LessThanOrEqual(System.Unit,System.Unit)">
+            <summary>
+            Returns true;
+            </summary>
+        </member>
+        <member name="T:System.UnitExtensions">
+            <summary>
+            Do not require other functional moduels, nor extends other framework classes (avoid method noise).
+            </summary>
+        </member>
+        <member name="M:System.UnitExtensions.Return``1(System.Unit,``0)">
+            <summary>
+            Provide an alternative value to unit
+            </summary>
+            <typeparam name="T">Alternative value type</typeparam>
+            <param name="anything">Alternative value</param>
+            <returns>Alternative value</returns>
+        </member>
+        <member name="M:System.UnitExtensions.Return``1(System.Unit,System.Func{``0})">
+            <summary>
+            Provide an alternative value to unit.
+            </summary>
+            <typeparam name="T">Alternative value type</typeparam>
+            <param name="anything">Alternative value</param>
+            <returns>Alternative value</returns>
+        </member>
+        <member name="M:System.UnitExtensions.GetAwaiter(System.Unit)">
+            <summary>
+            Returns immediately. Like <see cref="P:System.Threading.Tasks.Task.CompletedTask"/>
+            </summary>
+            <param name="self">Unit.</param>
+            <returns>Completed awaiter.</returns>
+        </member>
+        <member name="T:System.UnitExtensions.UnitAwaiter">
+            <summary>
+            Returns immediately. Like <see cref="P:System.Threading.Tasks.Task.CompletedTask"/>
+            </summary>
+        </member>
+    </members>
+</doc>

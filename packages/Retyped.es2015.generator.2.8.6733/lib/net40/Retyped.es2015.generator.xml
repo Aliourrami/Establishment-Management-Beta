@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Retyped.es2015.generator</name>
+    </assembly>
+    <members>
+        <member name="M:Retyped.es2015_generator.GeneratorFunction.New(System.Object[])">
+            <summary>
+            Creates a new Generator object.
+            </summary>
+            <param name = "args">A list of arguments the function accepts.</param>
+        </member>
+        <member name="M:Retyped.es2015_generator.GeneratorFunction.Self(System.Object[])">
+            <summary>
+            Creates a new Generator object.
+            </summary>
+            <param name = "args">A list of arguments the function accepts.</param>
+        </member>
+        <member name="P:Retyped.es2015_generator.GeneratorFunction.length">
+            <summary>
+            The length of the arguments.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_generator.GeneratorFunction.name">
+            <summary>
+            Returns the name of the function.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_generator.GeneratorFunction.prototype">
+            <summary>
+            A reference to the prototype.
+            </summary>
+        </member>
+        <member name="M:Retyped.es2015_generator.GeneratorFunctionConstructor.New(System.String[])">
+            <summary>
+            Creates a new Generator function.
+            </summary>
+            <param name = "args">A list of arguments the function accepts.</param>
+        </member>
+        <member name="M:Retyped.es2015_generator.GeneratorFunctionConstructor.Self(System.String[])">
+            <summary>
+            Creates a new Generator function.
+            </summary>
+            <param name = "args">A list of arguments the function accepts.</param>
+        </member>
+        <member name="P:Retyped.es2015_generator.GeneratorFunctionConstructor.length">
+            <summary>
+            The length of the arguments.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_generator.GeneratorFunctionConstructor.name">
+            <summary>
+            Returns the name of the function.
+            </summary>
+        </member>
+        <member name="P:Retyped.es2015_generator.GeneratorFunctionConstructor.prototype">
+            <summary>
+            A reference to the prototype.
+            </summary>
+        </member>
+    </members>
+</doc>

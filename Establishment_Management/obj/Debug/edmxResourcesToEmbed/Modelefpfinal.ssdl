@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EFP_FinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Absence">
+    <Key>
+      <PropertyRef Name="numSc" />
+      <PropertyRef Name="NumStg" />
+    </Key>
+    <Property Name="numSc" Type="int" Nullable="false" />
+    <Property Name="NumStg" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Affectation">
+    <Key>
+      <PropertyRef Name="numAff" />
+    </Key>
+    <Property Name="numAff" Type="int" Nullable="false" />
+    <Property Name="numGrp" Type="int" />
+    <Property Name="numFlr" Type="varchar" MaxLength="20" />
+    <Property Name="numMdl" Type="int" />
+    <Property Name="numFrm" Type="int" />
+    <Property Name="dateAff" Type="date" />
+  </EntityType>
+  <EntityType Name="EFM_Planification">
+    <Key>
+      <PropertyRef Name="numMdl" />
+      <PropertyRef Name="numFlr" />
+      <PropertyRef Name="numGrp" />
+    </Key>
+    <Property Name="numMdl" Type="int" Nullable="false" />
+    <Property Name="numFlr" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="numGrp" Type="int" Nullable="false" />
+    <Property Name="date_prevue" Type="date" />
+    <Property Name="date_efective" Type="date" />
+  </EntityType>
+  <EntityType Name="Filiere">
+    <Key>
+      <PropertyRef Name="numFlr" />
+    </Key>
+    <Property Name="numFlr" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nomFlr" Type="varchar" MaxLength="50" />
+    <Property Name="niveauFlr" Type="varchar" MaxLength="20" />
+    <Property Name="typeFlr" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Formateur">
+    <Key>
+      <PropertyRef Name="numfrm" />
+    </Key>
+    <Property Name="numfrm" Type="int" Nullable="false" />
+    <Property Name="matricule" Type="varchar" MaxLength="20" />
+    <Property Name="cin" Type="varchar" MaxLength="20" />
+    <Property Name="nomfrm" Type="varchar" MaxLength="20" />
+    <Property Name="prenomfrm" Type="varchar" MaxLength="20" />
+    <Property Name="dateN" Type="date" />
+    <Property Name="dateEmbauche" Type="date" />
+    <Property Name="grade" Type="varchar" MaxLength="20" />
+    <Property Name="statut" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Groupe">
+    <Key>
+      <PropertyRef Name="numGrp" />
+    </Key>
+    <Property Name="numGrp" Type="int" Nullable="false" />
+    <Property Name="nomGrp" Type="varchar" MaxLength="20" />
+    <Property Name="numflr" Type="varchar" MaxLength="20" />
+    <Property Name="annee" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="numMdl" />
+      <PropertyRef Name="numflr" />
+    </Key>
+    <Property Name="numMdl" Type="int" Nullable="false" />
+    <Property Name="numflr" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="anneeMdl" Type="varchar" MaxLength="10" />
+    <Property Name="nomMdl" Type="varchar" MaxLength="20" />
+    <Property Name="MH" Type="int" />
+    <Property Name="coeficientMdl" Type="int" />
+    <Property Name="semestreMdl" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Seance">
+    <Key>
+      <PropertyRef Name="numSc" />
+    </Key>
+    <Property Name="numSc" Type="int" Nullable="false" />
+    <Property Name="numAff" Type="int" />
+    <Property Name="dateSc" Type="date" />
+    <Property Name="duree" Type="int" />
+    <Property Name="salle" Type="int" />
+  </EntityType>
+  <EntityType Name="Stagaire">
+    <Key>
+      <PropertyRef Name="numStg" />
+    </Key>
+    <Property Name="numStg" Type="int" Nullable="false" />
+    <Property Name="nomStg" Type="varchar" MaxLength="20" />
+    <Property Name="prenomStg" Type="varchar" MaxLength="20" />
+    <Property Name="dateNStg" Type="date" />
+    <Property Name="numGrp" Type="int" />
+    <Property Name="Cin" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="FK__Absence__numSc__66603565">
+    <End Role="Seance" Type="Self.Seance" Multiplicity="1" />
+    <End Role="Absence" Type="Self.Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seance">
+        <PropertyRef Name="numSc" />
+      </Principal>
+      <Dependent Role="Absence">
+        <PropertyRef Name="numSc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Absence__NumStg__6754599E">
+    <End Role="Stagaire" Type="Self.Stagaire" Multiplicity="1" />
+    <End Role="Absence" Type="Self.Absence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stagaire">
+        <PropertyRef Name="numStg" />
+      </Principal>
+      <Dependent Role="Absence">
+        <PropertyRef Name="NumStg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Affectati__numFr__60A75C0F">
+    <End Role="Formateur" Type="Self.Formateur" Multiplicity="0..1" />
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formateur">
+        <PropertyRef Name="numfrm" />
+      </Principal>
+      <Dependent Role="Affectation">
+        <PropertyRef Name="numFrm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Affectati__numGr__5EBF139D">
+    <End Role="Groupe" Type="Self.Groupe" Multiplicity="0..1" />
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groupe">
+        <PropertyRef Name="numGrp" />
+      </Principal>
+      <Dependent Role="Affectation">
+        <PropertyRef Name="numGrp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Affectation__5FB337D6">
+    <End Role="Module" Type="Self.Module" Multiplicity="0..1" />
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="numMdl" />
+        <PropertyRef Name="numflr" />
+      </Principal>
+      <Dependent Role="Affectation">
+        <PropertyRef Name="numMdl" />
+        <PropertyRef Name="numFlr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EFM_Plani__numGr__5BE2A6F2">
+    <End Role="Groupe" Type="Self.Groupe" Multiplicity="1" />
+    <End Role="EFM_Planification" Type="Self.EFM_Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groupe">
+        <PropertyRef Name="numGrp" />
+      </Principal>
+      <Dependent Role="EFM_Planification">
+        <PropertyRef Name="numGrp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EFM_Planificatio__5AEE82B9">
+    <End Role="Module" Type="Self.Module" Multiplicity="1" />
+    <End Role="EFM_Planification" Type="Self.EFM_Planification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="numMdl" />
+        <PropertyRef Name="numflr" />
+      </Principal>
+      <Dependent Role="EFM_Planification">
+        <PropertyRef Name="numMdl" />
+        <PropertyRef Name="numFlr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Groupe__numflr__5441852A">
+    <End Role="Filiere" Type="Self.Filiere" Multiplicity="0..1" />
+    <End Role="Groupe" Type="Self.Groupe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filiere">
+        <PropertyRef Name="numFlr" />
+      </Principal>
+      <Dependent Role="Groupe">
+        <PropertyRef Name="numflr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Module__numflr__5165187F">
+    <End Role="Filiere" Type="Self.Filiere" Multiplicity="1" />
+    <End Role="Module" Type="Self.Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Filiere">
+        <PropertyRef Name="numFlr" />
+      </Principal>
+      <Dependent Role="Module">
+        <PropertyRef Name="numflr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Seance__numAff__6383C8BA">
+    <End Role="Affectation" Type="Self.Affectation" Multiplicity="0..1" />
+    <End Role="Seance" Type="Self.Seance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affectation">
+        <PropertyRef Name="numAff" />
+      </Principal>
+      <Dependent Role="Seance">
+        <PropertyRef Name="numAff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stagaire__numGrp__5812160E">
+    <End Role="Groupe" Type="Self.Groupe" Multiplicity="0..1" />
+    <End Role="Stagaire" Type="Self.Stagaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groupe">
+        <PropertyRef Name="numGrp" />
+      </Principal>
+      <Dependent Role="Stagaire">
+        <PropertyRef Name="numGrp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EFP_FinalModelStoreContainer">
+    <EntitySet Name="Absence" EntityType="Self.Absence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Affectation" EntityType="Self.Affectation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EFM_Planification" EntityType="Self.EFM_Planification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Filiere" EntityType="Self.Filiere" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Formateur" EntityType="Self.Formateur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groupe" EntityType="Self.Groupe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Seance" EntityType="Self.Seance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stagaire" EntityType="Self.Stagaire" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Absence__numSc__66603565" Association="Self.FK__Absence__numSc__66603565">
+      <End Role="Seance" EntitySet="Seance" />
+      <End Role="Absence" EntitySet="Absence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Absence__NumStg__6754599E" Association="Self.FK__Absence__NumStg__6754599E">
+      <End Role="Stagaire" EntitySet="Stagaire" />
+      <End Role="Absence" EntitySet="Absence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Affectati__numFr__60A75C0F" Association="Self.FK__Affectati__numFr__60A75C0F">
+      <End Role="Formateur" EntitySet="Formateur" />
+      <End Role="Affectation" EntitySet="Affectation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Affectati__numGr__5EBF139D" Association="Self.FK__Affectati__numGr__5EBF139D">
+      <End Role="Groupe" EntitySet="Groupe" />
+      <End Role="Affectation" EntitySet="Affectation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Affectation__5FB337D6" Association="Self.FK__Affectation__5FB337D6">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="Affectation" EntitySet="Affectation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EFM_Plani__numGr__5BE2A6F2" Association="Self.FK__EFM_Plani__numGr__5BE2A6F2">
+      <End Role="Groupe" EntitySet="Groupe" />
+      <End Role="EFM_Planification" EntitySet="EFM_Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EFM_Planificatio__5AEE82B9" Association="Self.FK__EFM_Planificatio__5AEE82B9">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="EFM_Planification" EntitySet="EFM_Planification" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Groupe__numflr__5441852A" Association="Self.FK__Groupe__numflr__5441852A">
+      <End Role="Filiere" EntitySet="Filiere" />
+      <End Role="Groupe" EntitySet="Groupe" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Module__numflr__5165187F" Association="Self.FK__Module__numflr__5165187F">
+      <End Role="Filiere" EntitySet="Filiere" />
+      <End Role="Module" EntitySet="Module" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Seance__numAff__6383C8BA" Association="Self.FK__Seance__numAff__6383C8BA">
+      <End Role="Affectation" EntitySet="Affectation" />
+      <End Role="Seance" EntitySet="Seance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stagaire__numGrp__5812160E" Association="Self.FK__Stagaire__numGrp__5812160E">
+      <End Role="Groupe" EntitySet="Groupe" />
+      <End Role="Stagaire" EntitySet="Stagaire" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

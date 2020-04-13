@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EgonsoftHU.ObjectExtensions</name>
+    </assembly>
+    <members>
+        <member name="T:EgonsoftHU.Extensions.ObjectExtensions">
+            <summary>
+            This class contains extension methods that are available for any <see cref="T:System.Object"/>.
+            </summary>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.IsDefaultValue``1(``0)">
+            <summary>
+            Determines whether a specified <paramref name="value"/> is the default value of its <see cref="T:System.Type"/>.
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="value">The value to check.</param>
+            <returns>Returns true for value types if default(<typeparamref name="T"/>) equals to <paramref name="value"/>; true for reference types if <paramref name="value"/> is null; otherwise, false.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.IsIn``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])">
+            <summary>
+            Determines whether a specified collection contains the current value by using a specified <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.
+            If no equality comparer is specified then the default equality comparer will be used.
+            </summary>
+            <typeparam name="T">The type of both the current value and the elements in <paramref name="acceptedValues"/>.</typeparam>
+            <param name="value">The value to locate in the collection.</param>
+            <param name="equalityComparer">An equality comparer to compare values.</param>
+            <param name="acceptedValues">A collection in which to locate a value.</param>
+            <returns>Returns true if the specified collection contains an element that has the specified value; otherwise, false.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.IsIn``1(``0,``0[])">
+            <summary>
+            Determines whether a specified collection contains the current value by using the default equality comparer.
+            </summary>
+            <typeparam name="T">The type of both the current value and the elements in <paramref name="acceptedValues"/>.</typeparam>
+            <param name="value">The value to locate in the collection.</param>
+            <param name="acceptedValues">A collection in which to locate a value.</param>
+            <returns>Returns true if the specified collection contains an element that has the specified value; otherwise, false.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.IsNotIn``1(``0,``0[])">
+            <summary>
+            Determines whether a specified collection does not contain the current value by using a specified <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.
+            If no equality comparer is specified then the default equality comparer will be used.
+            </summary>
+            <typeparam name="T">The type of both the current value and the elements in <paramref name="deniedValues"/>.</typeparam>
+            <param name="value">The value to locate in the collection.</param>
+            <param name="deniedValues">A collection in which to locate a value.</param>
+            <returns>Returns true if the specified collection does not contain an element that has the specified value; otherwise, false.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.IsNotIn``1(``0,System.Collections.Generic.IEqualityComparer{``0},``0[])">
+            <summary>
+            Determines whether a specified collection does not contain the current value by using the default equality comparer.
+            </summary>
+            <typeparam name="T">The type of both the current value and the elements in <paramref name="deniedValues"/>.</typeparam>
+            <param name="value">The value to locate in the collection.</param>
+            <param name="equalityComparer">An equality comparer to compare values.</param>
+            <param name="deniedValues">A collection in which to locate a value.</param>
+            <returns>Returns true if the specified collection does not contain an element that has the specified value; otherwise, false.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.AsEnumerable``1(``0)">
+            <summary>
+            Returns a value as a sequence that contains only that value.
+            </summary>
+            <typeparam name="T">The type of the value.</typeparam>
+            <param name="value">A value to be returned as <see cref="T:System.Collections.Generic.IEnumerable`1"/>.</param>
+            <returns>Returns a sequence that contains only specified value.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.SetPropertyValue``1(``0,System.String,System.Object)">
+            <summary>
+            Sets the value of an instance property of the source object using reflection.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <param name="sourceObject">The source object whose property value should be set.</param>
+            <param name="propertyName">The name of the property whose value should be set.</param>
+            <param name="value">The value to be set as the value of the property of the source object.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when this extension method is called on an object that is null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the type of the source object does not declare a public property with the specified name.</exception>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.TrySetPropertyValue``1(``0,System.String,System.Object)">
+            <summary>
+            Sets the value of an instance property of the source object using reflection.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <param name="sourceObject">The source object whose property value should be set.</param>
+            <param name="propertyName">The name of the property whose value should be set.</param>
+            <param name="value">The value to be set as the value of the property of the source object.</param>
+            <returns>Returns true if the property value has been set; otherwise, false.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.GetPropertyValue``1(``0,System.String)">
+            <summary>
+            Gets the value of an instance property of the source object using reflection.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <param name="sourceObject">The source object whose property value should be get.</param>
+            <param name="propertyName">The name of the property whose value should be get.</param>
+            <returns>A property value of the source object if the property exists; otherwise, null.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.TryGetPropertyValue``1(``0,System.String,System.Object@)">
+            <summary>
+            Gets the value of an instance property of the source object using reflection.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <param name="sourceObject">The source object whose property value should be get.</param>
+            <param name="propertyName">The name of the property whose value should be get.</param>
+            <param name="value">The value of a property of the source object.</param>
+            <returns>Returns true if the property exists; otherwise, false.</returns>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.GetValue``2(``0,System.Func{``0,``1})">
+            <summary>
+            Gets a value using a specified value selector that gets the source object as input parameter.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <typeparam name="TResult">The type of the value that is returned by the value selector.</typeparam>
+            <param name="sourceObject">The source object that can be used by a value selector.</param>
+            <param name="valueSelector">A value selector that gets the source object as input parameter and returns a value.</param>
+            <returns>Returns a value returned by the specified value selector.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when this extension method is called on an object that is null or the value selector is null.</exception>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.GetValueOrDefault``2(``0,System.Func{``0,``1},``1)">
+            <summary>
+            Gets a value using a specified value selector or a specified default value. The value selector gets the source object as input parameter.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <typeparam name="TResult">The type of the value that is returned by the value selector.</typeparam>
+            <param name="sourceObject">The source object that can be used by a value selector.</param>
+            <param name="valueSelector">A value selector that gets the source object as input parameter and returns a value.</param>
+            <param name="defaultValue">The value to be returned if the source object is null or the value returned by the value selector is the default value of the return type.</param>
+            <returns>Returns a value returned by the specified value selector if source object is not null and the returned value is not the default value of the return type; otherwise, the specified default value.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the value selector is null.</exception>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.GetStringValueOrNull``1(``0,System.Func{``0,System.String})">
+            <summary>
+            Gets a string value using a specified value selector or null. The value selector gets the source object as input parameter.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <param name="sourceObject">The source object that can be used by a value selector.</param>
+            <param name="valueSelector">A value selector that gets the source object as input parameter and returns a value.</param>
+            <returns>Returns a string value returned by the specified value selector if source object is not null and the returned value is not null; otherwise, null.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the value selector is null.</exception>
+        </member>
+        <member name="M:EgonsoftHU.Extensions.ObjectExtensions.GetStringValueOrEmptyString``1(``0,System.Func{``0,System.String})">
+            <summary>
+            Gets a string value using a specified value selector or <see cref="F:System.String.Empty"/>. The value selector gets the source object as input parameter.
+            </summary>
+            <typeparam name="TSource">The type of the source object.</typeparam>
+            <param name="sourceObject">The source object that can be used by a value selector.</param>
+            <param name="valueSelector">A value selector that gets the source object as input parameter and returns a value.</param>
+            <returns>Returns a string value returned by the specified value selector if source object is not null and the returned value is not null; otherwise, <see cref="F:System.String.Empty"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the value selector is null.</exception>
+        </member>
+    </members>
+</doc>

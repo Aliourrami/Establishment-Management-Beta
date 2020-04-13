@@ -1,0 +1,2196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Retyped.bluebird</name>
+    </assembly>
+    <members>
+        <member name="M:Retyped.bluebird.Bluebird`1.#ctor(Retyped.bluebird.Bluebird{`0}.Fn)">
+            <summary>
+            Create a new promise. The passed in function will receive functions `resolve` and `reject` as its arguments which can be called to seal the fate of the created promise.
+            If promise cancellation is enabled, passed in function will receive one more function argument `onCancel` that allows to register an optional cancellation callback.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.then``1">
+            <summary>
+            Promises/A+ `.then()`. Returns a new promise chained from this promise.
+            The new promise will be rejected or resolved depending on the passed `fulfilledHandler`, `rejectedHandler` and the state of this promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.then``1(Retyped.bluebird.Bluebird{`0}.thenFn{``0})">
+            <summary>
+            Promises/A+ `.then()`. Returns a new promise chained from this promise.
+            The new promise will be rejected or resolved depending on the passed `fulfilledHandler`, `rejectedHandler` and the state of this promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.then``1(Retyped.bluebird.Bluebird{`0}.thenFn{``0},Retyped.bluebird.Bluebird{`0}.thenFn2{``0})">
+            <summary>
+            Promises/A+ `.then()`. Returns a new promise chained from this promise.
+            The new promise will be rejected or resolved depending on the passed `fulfilledHandler`, `rejectedHandler` and the state of this promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch(Retyped.bluebird.Bluebird{`0}.catchFn)">
+            <summary>
+            This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
+            Any exception happening in a `.then`-chain will propagate to nearest `.catch` handler.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Bridge.Union{Retyped.bluebird.Bluebird{`0}.catchFn2{``0},Retyped.Primitive.Undefined,Retyped.Primitive.Null})">
+            <summary>
+            This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
+            Any exception happening in a `.then`-chain will propagate to nearest `.catch` handler.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Retyped.bluebird.Bluebird{`0}.catchFn2{``0})">
+            <summary>
+            This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
+            Any exception happening in a `.then`-chain will propagate to nearest `.catch` handler.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Retyped.Primitive.Undefined)">
+            <summary>
+            This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
+            Any exception happening in a `.then`-chain will propagate to nearest `.catch` handler.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Retyped.Primitive.Null)">
+            <summary>
+            This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
+            Any exception happening in a `.then`-chain will propagate to nearest `.catch` handler.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``5(Retyped.bluebird.CatchFilter{``0},Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.CatchFilter{``4},Retyped.bluebird.Bluebird{`0}.catchFn3{``0,``1,``2,``3,``4})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``6(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.CatchFilter{``4},Retyped.bluebird.CatchFilter{``5},Retyped.bluebird.Bluebird{`0}.catchFn4{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``4(Retyped.bluebird.CatchFilter{``0},Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.Bluebird{`0}.catchFn5{``0,``1,``2,``3})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``5(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.CatchFilter{``4},Retyped.bluebird.Bluebird{`0}.catchFn6{``0,``1,``2,``3,``4})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``0},Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.Bluebird{`0}.catchFn7{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``4(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.Bluebird{`0}.catchFn8{``0,``1,``2,``3})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0},Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Union{Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Bridge.Intersection{Retyped.IObject,``0}},Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Union{Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Bridge.Intersection{Retyped.IObject,``0}},Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Union{Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Bridge.Intersection{Retyped.IObject,``0}},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Union{Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Bridge.Intersection{Retyped.IObject,``0}},Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Intersection{Retyped.IObject,``0},Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Intersection{Retyped.IObject,``0},Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Intersection{Retyped.IObject,``0},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Intersection{Retyped.IObject,``0},Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.Bluebird{`0}.catchFn9{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Intersection{Retyped.IObject,``1},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``3(Bridge.Intersection{Retyped.IObject,``1},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.catchFn10{``0,``1,``2})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Retyped.bluebird.CatchFilter{``0},Retyped.bluebird.Bluebird{`0}.catchFn11{``0})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Bridge.Union{Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Bridge.Intersection{Retyped.IObject,``0}},Retyped.bluebird.Bluebird{`0}.catchFn11{``0})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Retyped.bluebird.CatchFilter{``0}.CatchFilterCtorFn{``0},Retyped.bluebird.Bluebird{`0}.catchFn11{``0})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Retyped.bluebird.CatchFilter{``0}.CatchFilterFn{``0},Retyped.bluebird.Bluebird{`0}.catchFn11{``0})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``1(Bridge.Intersection{Retyped.IObject,``0},Retyped.bluebird.Bluebird{`0}.catchFn11{``0})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.Bluebird{`0}.catchFn12{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.Bluebird{`0}.catchFn12{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn12{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.Bluebird{`0}.catchFn12{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catch``2(Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.Bluebird{`0}.catchFn12{``0,``1})">
+            <summary>
+            This extends `.catch` to work more like catch-clauses in languages like Java or C#.
+            Instead of manually checking `instanceof` or `.name === "SomeError"`,
+            you may specify a number of error constructors which are eligible for this catch handler.
+            The catch handler that is first met that has eligible constructors specified, is the one that will be called.
+            This method also supports predicate-based filters.
+            If you pass a predicate function instead of an error constructor, the predicate will receive the error as an argument.
+            The return result of the predicate will be used determine whether the error handler should be called.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.caught">
+            <summary>
+            This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
+            Any exception happening in a `.then`-chain will propagate to nearest `.catch` handler.
+            Alias `.caught();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.error``1(Retyped.bluebird.Bluebird{`0}.errorFn{``0})">
+            <summary>
+            Like `.catch` but instead of catching all types of exceptions, it only catches those that don't originate from thrown errors but rather from explicit rejections.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.finally``1(Retyped.bluebird.Bluebird{`0}.finallyFn{``0})">
+            <summary>
+            Pass a handler that will be called regardless of this promise's fate. Returns a new promise chained from this promise.
+            There are special semantics for `.finally()` in that the final value cannot be modified from the handler.
+            Alias `.lastly();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.bind(System.Object)">
+            <summary>
+            Create a promise that follows this promise, but is bound to the given `thisArg` value. A bound promise will call its handlers with the bound value set to `this`.
+            Additionally promises derived from a bound promise will also be bound promises with the same `thisArg` binding as the original promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.done``1">
+            <summary>
+            Like `.then()`, but any unhandled rejection that ends up here will be thrown as an error.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.done``1(Retyped.bluebird.Bluebird{`0}.doneFn{``0})">
+            <summary>
+            Like `.then()`, but any unhandled rejection that ends up here will be thrown as an error.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.done``1(Retyped.bluebird.Bluebird{`0}.doneFn{``0},Retyped.bluebird.Bluebird{`0}.doneFn2{``0})">
+            <summary>
+            Like `.then()`, but any unhandled rejection that ends up here will be thrown as an error.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tap``1(Retyped.bluebird.Bluebird{`0}.tapFn{``0})">
+            <summary>
+            Like `.finally()`, but not called for rejections.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``1(Retyped.bluebird.Bluebird{`0}.tapCatchFn{``0})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``6(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.CatchFilter{``4},Retyped.bluebird.CatchFilter{``5},Retyped.bluebird.Bluebird{`0}.tapCatchFn2{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``5(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.CatchFilter{``4},Retyped.bluebird.Bluebird{`0}.tapCatchFn3{``0,``1,``2,``3,``4})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``4(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.CatchFilter{``3},Retyped.bluebird.Bluebird{`0}.tapCatchFn4{``0,``1,``2,``3})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.CatchFilter{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Intersection{Retyped.IObject,``1},Bridge.Union{Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Bridge.Intersection{Retyped.IObject,``2}},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterCtorFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.CatchFilter{``2}.CatchFilterFn{``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``3(Bridge.Intersection{Retyped.IObject,``1},Bridge.Intersection{Retyped.IObject,``2},Retyped.bluebird.Bluebird{`0}.tapCatchFn5{``0,``1,``2})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``2(Retyped.bluebird.CatchFilter{``1},Retyped.bluebird.Bluebird{`0}.tapCatchFn6{``0,``1})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``2(Bridge.Union{Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Bridge.Intersection{Retyped.IObject,``1}},Retyped.bluebird.Bluebird{`0}.tapCatchFn6{``0,``1})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``2(Retyped.bluebird.CatchFilter{``1}.CatchFilterCtorFn{``1},Retyped.bluebird.Bluebird{`0}.tapCatchFn6{``0,``1})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``2(Retyped.bluebird.CatchFilter{``1}.CatchFilterFn{``1},Retyped.bluebird.Bluebird{`0}.tapCatchFn6{``0,``1})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.tapCatch``2(Bridge.Intersection{Retyped.IObject,``1},Retyped.bluebird.Bluebird{`0}.tapCatchFn6{``0,``1})">
+            <summary>
+            Like `.catch()` but rethrows the error
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.delay(System.Double)">
+            <summary>
+            Same as calling `Promise.delay(ms, this)`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.timeout(System.Double)">
+            <summary>
+            Returns a promise that will be fulfilled with this promise's fulfillment value or rejection reason.
+            However, if this promise is not fulfilled or rejected within ms milliseconds, the returned promise
+            is rejected with a TimeoutError or the error as the reason.
+            You may specify a custom error message with the `message` parameter.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.timeout(System.Double,Bridge.Union{System.String,Retyped.es5.Error})">
+            <summary>
+            Returns a promise that will be fulfilled with this promise's fulfillment value or rejection reason.
+            However, if this promise is not fulfilled or rejected within ms milliseconds, the returned promise
+            is rejected with a TimeoutError or the error as the reason.
+            You may specify a custom error message with the `message` parameter.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.timeout(System.Double,System.String)">
+            <summary>
+            Returns a promise that will be fulfilled with this promise's fulfillment value or rejection reason.
+            However, if this promise is not fulfilled or rejected within ms milliseconds, the returned promise
+            is rejected with a TimeoutError or the error as the reason.
+            You may specify a custom error message with the `message` parameter.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.timeout(System.Double,Retyped.es5.Error)">
+            <summary>
+            Returns a promise that will be fulfilled with this promise's fulfillment value or rejection reason.
+            However, if this promise is not fulfilled or rejected within ms milliseconds, the returned promise
+            is rejected with a TimeoutError or the error as the reason.
+            You may specify a custom error message with the `message` parameter.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.nodeify(Retyped.bluebird.Bluebird{`0}.nodeifyFn)">
+            <summary>
+            Register a node-style callback on this promise.
+            When this promise is is either fulfilled or rejected,
+            the node callback will be called back with the node.js convention where error reason is the first argument and success value is the second argument.
+            The error argument will be `null` in case of success.
+            If the `callback` argument is not a function, this method does not do anything.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.nodeify(Retyped.bluebird.Bluebird{`0}.nodeifyFn,Retyped.bluebird.Bluebird.SpreadOption)">
+            <summary>
+            Register a node-style callback on this promise.
+            When this promise is is either fulfilled or rejected,
+            the node callback will be called back with the node.js convention where error reason is the first argument and success value is the second argument.
+            The error argument will be `null` in case of success.
+            If the `callback` argument is not a function, this method does not do anything.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.nodeify(System.Object[])">
+            <summary>
+            Register a node-style callback on this promise.
+            When this promise is is either fulfilled or rejected,
+            the node callback will be called back with the node.js convention where error reason is the first argument and success value is the second argument.
+            The error argument will be `null` in case of success.
+            If the `callback` argument is not a function, this method does not do anything.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.isFulfilled">
+            <summary>
+            See if this `promise` has been fulfilled.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.isRejected">
+            <summary>
+            See if this `promise` has been rejected.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.isPending">
+            <summary>
+            See if this `promise` is still defer.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.isCancelled">
+            <summary>
+            See if this `promise` has been cancelled.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.isResolved">
+            <summary>
+            See if this `promise` is resolved -> either fulfilled or rejected.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.value">
+            <summary>
+            Get the fulfillment value of the underlying promise. Throws if the promise isn't fulfilled yet.
+            throws `TypeError`
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reason">
+            <summary>
+            Get the rejection reason for the underlying promise. Throws if the promise isn't rejected yet.
+            throws `TypeError`
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reflect">
+            <summary>
+            Synchronously inspect the state of this `promise`. The `PromiseInspection` will represent the state of
+            the promise as snapshotted at the time of calling `.reflect()`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reflect2">
+            <summary>
+            Synchronously inspect the state of this `promise`. The `PromiseInspection` will represent the state of
+            the promise as snapshotted at the time of calling `.reflect()`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.call(Retyped.KeyOf{`0},System.Object[])">
+            <summary>
+            This is a convenience method for doing:
+            <code>
+            promise.then(function(obj){
+            return obj[propertyName].call(obj, arg...);
+            });
+            </code>
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.get``1(``0)">
+            <summary>
+            This is a convenience method for doing:
+            <code>
+            promise.then(function(obj){
+            return obj[propertyName];
+            });
+            </code>
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.return">
+            <summary>
+            Convenience method for:
+            <code>
+            .then(function() {
+            return value;
+            });
+            </code>
+            in the case where `value` doesn't change its value. That means `value` is bound at the time of calling `.return()`
+            Alias `.thenReturn();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.return``1(``0)">
+            <summary>
+            Convenience method for:
+            <code>
+            .then(function() {
+            return value;
+            });
+            </code>
+            in the case where `value` doesn't change its value. That means `value` is bound at the time of calling `.return()`
+            Alias `.thenReturn();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.throw(Retyped.es5.Error)">
+            <summary>
+            Convenience method for:
+            <code>
+            .then(function() {
+            throw reason;
+            });
+            </code>
+            Same limitations apply as with `.return()`.
+            Alias `.thenThrow();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catchReturn``1(``0)">
+            <summary>
+            Convenience method for:
+            <code>
+            .catch(function() {
+            return value;
+            });
+            </code>
+            in the case where `value` doesn't change its value. That means `value` is bound at the time of calling `.catchReturn()`
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.catchThrow(Retyped.es5.Error)">
+            <summary>
+            Convenience method for:
+            <code>
+            .catch(function() {
+            throw reason;
+            });
+            </code>
+            Same limitations apply as with `.catchReturn()`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.toString">
+            <summary>
+            Convert to String.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.toJSON">
+            <summary>
+            This is implicitly called by `JSON.stringify` when serializing the object. Returns a serialized representation of the `Promise`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.spread``2(Retyped.bluebird.Bluebird{`0}.spreadFn{``0,``1})">
+            <summary>
+            Like calling `.then`, but the fulfillment value or rejection reason is assumed to be an array, which is flattened to the formal parameters of the handlers.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.spread``1(Retyped.bluebird.Bluebird{`0}.spreadFn2{``0})">
+            <summary>
+            Like calling `.then`, but the fulfillment value or rejection reason is assumed to be an array, which is flattened to the formal parameters of the handlers.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.all``1">
+            <summary>
+            Same as calling `Promise.all(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.props``2">
+            <summary>
+            Same as calling `Promise.props(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.props``1">
+            <summary>
+            Same as calling `Promise.props(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.any``1">
+            <summary>
+            Same as calling `Promise.any(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.some``1(System.Double)">
+            <summary>
+            Same as calling `Promise.some(thisPromise)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.race``1">
+            <summary>
+            Same as calling `Promise.race(thisPromise, count)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map``2(Retyped.bluebird.Bluebird{`0}.mapFn{``0,``1})">
+            <summary>
+            Same as calling `Bluebird.map(thisPromise, mapper)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map``2(Retyped.bluebird.Bluebird{`0}.mapFn{``0,``1},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Same as calling `Bluebird.map(thisPromise, mapper)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce``2(Retyped.bluebird.Bluebird{`0}.reduceFn{``0,``1})">
+            <summary>
+            Same as calling `Promise.reduce(thisPromise, Function reducer, initialValue)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce``2(Retyped.bluebird.Bluebird{`0}.reduceFn{``0,``1},``1)">
+            <summary>
+            Same as calling `Promise.reduce(thisPromise, Function reducer, initialValue)`. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter``1(Retyped.bluebird.Bluebird{`0}.filterFn{``0})">
+            <summary>
+            Same as calling ``Promise.filter(thisPromise, filterer)``. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter``1(Retyped.bluebird.Bluebird{`0}.filterFn{``0},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Same as calling ``Promise.filter(thisPromise, filterer)``. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.each``2(Retyped.bluebird.Bluebird{``0}.eachFn{``0,``1})">
+            <summary>
+            Same as calling ``Bluebird.each(thisPromise, iterator)``. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.mapSeries``2(Retyped.bluebird.Bluebird{``0}.mapSeriesFn{``0,``1})">
+            <summary>
+            Same as calling ``Bluebird.mapSeries(thisPromise, iterator)``. With the exception that if this promise is bound to a value, the returned promise is bound to that value too.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.cancel">
+            <summary>
+            Cancel this `promise`. Will not do anything if this promise is already settled or if the cancellation feature has not been enabled
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.suppressUnhandledRejections">
+            <summary>
+            Basically sugar for doing: somePromise.catch(function(){});
+            Which is needed in case error handlers are attached asynchronously to the promise later, which would otherwise result in premature unhandled rejection reporting.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.try``1(Retyped.bluebird.Bluebird{``0}.tryFn{``0})">
+            <summary>
+            Start the chain of promises with `Promise.try`. Any synchronous exceptions will be turned into rejections on the returned promise.
+            Note about second argument: if it's specifically a true array, its values become respective arguments for the function call.
+            Otherwise it is passed as is as the first argument for the function call.
+            Alias for `attempt();` for compatibility with earlier ECMAScript version.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.method``2(Retyped.bluebird.Bluebird{``0}.methodFn2{``0,``1})">
+            <summary>
+            Returns a new function that wraps the given function `fn`.
+            The new function will always return a promise that is fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
+            This method is convenient when a function can sometimes return synchronously or throw synchronously.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.method``3(Retyped.bluebird.Bluebird{``0}.methodFn4{``0,``1,``2})">
+            <summary>
+            Returns a new function that wraps the given function `fn`.
+            The new function will always return a promise that is fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
+            This method is convenient when a function can sometimes return synchronously or throw synchronously.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.method``4(Retyped.bluebird.Bluebird{``0}.methodFn6{``0,``1,``2,``3})">
+            <summary>
+            Returns a new function that wraps the given function `fn`.
+            The new function will always return a promise that is fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
+            This method is convenient when a function can sometimes return synchronously or throw synchronously.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.method``5(Retyped.bluebird.Bluebird{``0}.methodFn8{``0,``1,``2,``3,``4})">
+            <summary>
+            Returns a new function that wraps the given function `fn`.
+            The new function will always return a promise that is fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
+            This method is convenient when a function can sometimes return synchronously or throw synchronously.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.method``6(Retyped.bluebird.Bluebird{``0}.methodFn10{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            Returns a new function that wraps the given function `fn`.
+            The new function will always return a promise that is fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
+            This method is convenient when a function can sometimes return synchronously or throw synchronously.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.method``1(Retyped.bluebird.Bluebird{``0}.methodFn12{``0})">
+            <summary>
+            Returns a new function that wraps the given function `fn`.
+            The new function will always return a promise that is fulfilled with the original functions return values or rejected with thrown exceptions from the original function.
+            This method is convenient when a function can sometimes return synchronously or throw synchronously.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.resolve">
+            <summary>
+            Create a promise that is resolved with the given `value`. If `value` is a thenable or promise, the returned promise will assume its state.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.resolve``1(Bridge.Union{``0,Retyped.es5.PromiseLike{``0}})">
+            <summary>
+            Create a promise that is resolved with the given `value`. If `value` is a thenable or promise, the returned promise will assume its state.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.resolve``1(``0)">
+            <summary>
+            Create a promise that is resolved with the given `value`. If `value` is a thenable or promise, the returned promise will assume its state.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.resolve``1(Retyped.es5.PromiseLike{``0})">
+            <summary>
+            Create a promise that is resolved with the given `value`. If `value` is a thenable or promise, the returned promise will assume its state.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reject(System.Object)">
+            <summary>
+            Create a promise that is rejected with the given `reason`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.defer``1">
+            <summary>
+            Create a promise with undecided fate and return a `PromiseResolver` to control it. See resolution?: Promise(#promise-resolution).
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.cast``1(Bridge.Union{``0,Retyped.es5.PromiseLike{``0}})">
+            <summary>
+            Cast the given `value` to a trusted promise.
+            If `value` is already a trusted `Promise`, it is returned as is. If `value` is not a thenable, a fulfilled is: Promise returned with `value` as its fulfillment value.
+            If `value` is a thenable (Promise-like object, like those returned by jQuery's `$.ajax`), returns a trusted that: Promise assimilates the state of the thenable.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.cast``1(``0)">
+            <summary>
+            Cast the given `value` to a trusted promise.
+            If `value` is already a trusted `Promise`, it is returned as is. If `value` is not a thenable, a fulfilled is: Promise returned with `value` as its fulfillment value.
+            If `value` is a thenable (Promise-like object, like those returned by jQuery's `$.ajax`), returns a trusted that: Promise assimilates the state of the thenable.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.cast``1(Retyped.es5.PromiseLike{``0})">
+            <summary>
+            Cast the given `value` to a trusted promise.
+            If `value` is already a trusted `Promise`, it is returned as is. If `value` is not a thenable, a fulfilled is: Promise returned with `value` as its fulfillment value.
+            If `value` is a thenable (Promise-like object, like those returned by jQuery's `$.ajax`), returns a trusted that: Promise assimilates the state of the thenable.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.bind_Static(System.Object)">
+            <summary>
+            Sugar for `Promise.resolve(undefined).bind(thisArg);`. See `.bind()`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.is(System.Object)">
+            <summary>
+            See if `value` is a trusted Promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.longStackTraces">
+            <summary>
+            Call this right after the library is loaded to enabled long stack traces.
+            Long stack traces cannot be disabled after being enabled, and cannot be enabled after promises have already been created.
+            Long stack traces imply a substantial performance penalty, around 4-5x for throughput and 0.5x for latency.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.delay_Static``1(System.Double,Bridge.Union{``0,Retyped.es5.PromiseLike{``0}})">
+            <summary>
+            Returns a promise that will be resolved with value (or undefined) after given ms milliseconds.
+            If value is a promise, the delay will start counting down when it is fulfilled and the returned
+            promise will be fulfilled with the fulfillment value of the value promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.delay_Static``1(System.Double,``0)">
+            <summary>
+            Returns a promise that will be resolved with value (or undefined) after given ms milliseconds.
+            If value is a promise, the delay will start counting down when it is fulfilled and the returned
+            promise will be fulfilled with the fulfillment value of the value promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.delay_Static``1(System.Double,Retyped.es5.PromiseLike{``0})">
+            <summary>
+            Returns a promise that will be resolved with value (or undefined) after given ms milliseconds.
+            If value is a promise, the delay will start counting down when it is fulfilled and the returned
+            promise will be fulfilled with the fulfillment value of the value promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.delay_Static(System.Double)">
+            <summary>
+            Returns a promise that will be resolved with value (or undefined) after given ms milliseconds.
+            If value is a promise, the delay will start counting down when it is fulfilled and the returned
+            promise will be fulfilled with the fulfillment value of the value promise.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``1(Retyped.bluebird.Bluebird{`0}.promisifyFn2{``0})">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``1(Retyped.bluebird.Bluebird{`0}.promisifyFn2{``0},Retyped.bluebird.Bluebird.PromisifyOptions)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``2(Retyped.bluebird.Bluebird{`0}.promisifyFn5{``0,``1})">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``2(Retyped.bluebird.Bluebird{`0}.promisifyFn5{``0,``1},Retyped.bluebird.Bluebird.PromisifyOptions)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``3(Retyped.bluebird.Bluebird{`0}.promisifyFn8{``0,``1,``2})">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``3(Retyped.bluebird.Bluebird{`0}.promisifyFn8{``0,``1,``2},Retyped.bluebird.Bluebird.PromisifyOptions)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``4(Retyped.bluebird.Bluebird{`0}.promisifyFn11{``0,``1,``2,``3})">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``4(Retyped.bluebird.Bluebird{`0}.promisifyFn11{``0,``1,``2,``3},Retyped.bluebird.Bluebird.PromisifyOptions)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``5(Retyped.bluebird.Bluebird{`0}.promisifyFn14{``0,``1,``2,``3,``4})">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``5(Retyped.bluebird.Bluebird{`0}.promisifyFn14{``0,``1,``2,``3,``4},Retyped.bluebird.Bluebird.PromisifyOptions)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``6(Retyped.bluebird.Bluebird{`0}.promisifyFn17{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify``6(Retyped.bluebird.Bluebird{`0}.promisifyFn17{``0,``1,``2,``3,``4,``5},Retyped.bluebird.Bluebird.PromisifyOptions)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify(Retyped.bluebird.Bluebird{`0}.promisifyFn20)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisify(Retyped.bluebird.Bluebird{`0}.promisifyFn20,Retyped.bluebird.Bluebird.PromisifyOptions)">
+            <summary>
+            Returns a function that will wrap the given `nodeFunction`.
+            Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function.
+            The node function should conform to node.js convention of accepting a callback as last argument and
+            calling that callback with error as the first argument and success value on the second argument.
+            If the `nodeFunction` calls its callback with multiple success values, the fulfillment value will be an array of them.
+            If you pass a `receiver`, the `nodeFunction` will be called as a method on the `receiver`.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisifyAll``1(``0)">
+            <summary>
+            Promisifies the entire object by going through the object's properties and creating an async equivalent of each function on the object and its prototype chain.
+            The promisified method name will be the original method name postfixed with `Async`. Returns the input object.
+            Note that the original methods on the object are not overwritten but new methods are created with the `Async`-postfix. For example,
+            if you `promisifyAll()` the node.js `fs` object use `fs.statAsync()` to call the promisified `stat` method.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.promisifyAll``1(``0,Retyped.bluebird.Bluebird.PromisifyAllOptions{``0})">
+            <summary>
+            Promisifies the entire object by going through the object's properties and creating an async equivalent of each function on the object and its prototype chain.
+            The promisified method name will be the original method name postfixed with `Async`. Returns the input object.
+            Note that the original methods on the object are not overwritten but new methods are created with the `Async`-postfix. For example,
+            if you `promisifyAll()` the node.js `fs` object use `fs.statAsync()` to call the promisified `stat` method.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.fromNode(Retyped.bluebird.Bluebird{`0}.fromNodeFn)">
+            <summary>
+            Returns a promise that is resolved by a node style callback function.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.fromNode(Retyped.bluebird.Bluebird{`0}.fromNodeFn,Retyped.bluebird.Bluebird.FromNodeOptions)">
+            <summary>
+            Returns a promise that is resolved by a node style callback function.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.fromNode``1(Retyped.bluebird.Bluebird{`0}.fromNodeFn3{``0})">
+            <summary>
+            Returns a promise that is resolved by a node style callback function.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.fromNode``1(Retyped.bluebird.Bluebird{`0}.fromNodeFn3{``0},Retyped.bluebird.Bluebird.FromNodeOptions)">
+            <summary>
+            Returns a promise that is resolved by a node style callback function.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``1(Retyped.bluebird.Bluebird{`0}.coroutineFn2{``0})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``1(Retyped.bluebird.Bluebird{`0}.coroutineFn2{``0},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``2(Retyped.bluebird.Bluebird{`0}.coroutineFn4{``0,``1})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``2(Retyped.bluebird.Bluebird{`0}.coroutineFn4{``0,``1},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``3(Retyped.bluebird.Bluebird{`0}.coroutineFn6{``0,``1,``2})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``3(Retyped.bluebird.Bluebird{`0}.coroutineFn6{``0,``1,``2},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``4(Retyped.bluebird.Bluebird{`0}.coroutineFn8{``0,``1,``2,``3})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``4(Retyped.bluebird.Bluebird{`0}.coroutineFn8{``0,``1,``2,``3},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``5(Retyped.bluebird.Bluebird{`0}.coroutineFn10{``0,``1,``2,``3,``4})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``5(Retyped.bluebird.Bluebird{`0}.coroutineFn10{``0,``1,``2,``3,``4},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``6(Retyped.bluebird.Bluebird{`0}.coroutineFn12{``0,``1,``2,``3,``4,``5})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``6(Retyped.bluebird.Bluebird{`0}.coroutineFn12{``0,``1,``2,``3,``4,``5},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``7(Retyped.bluebird.Bluebird{`0}.coroutineFn14{``0,``1,``2,``3,``4,``5,``6})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``7(Retyped.bluebird.Bluebird{`0}.coroutineFn14{``0,``1,``2,``3,``4,``5,``6},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``8(Retyped.bluebird.Bluebird{`0}.coroutineFn16{``0,``1,``2,``3,``4,``5,``6,``7})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``8(Retyped.bluebird.Bluebird{`0}.coroutineFn16{``0,``1,``2,``3,``4,``5,``6,``7},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``9(Retyped.bluebird.Bluebird{`0}.coroutineFn18{``0,``1,``2,``3,``4,``5,``6,``7,``8})">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.coroutine``9(Retyped.bluebird.Bluebird{`0}.coroutineFn18{``0,``1,``2,``3,``4,``5,``6,``7,``8},Retyped.bluebird.Bluebird.CoroutineOptions)">
+            <summary>
+            Returns a function that can use `yield` to run asynchronous code synchronously.
+            This feature requires the support of generators which are drafted in the next version of the language.
+            Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.onPossiblyUnhandledRejection(Retyped.bluebird.Bluebird{`0}.onPossiblyUnhandledRejectionFn)">
+            <summary>
+            Add `handler` as the handler to call when there is a possibly unhandled rejection. The default handler logs the error stack to stderr or `console.error` in browsers.
+            Passing no value or a non-function will have the effect of removing any kind of handling for possibly unhandled rejections.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.onPossiblyUnhandledRejection">
+            <summary>
+            Add handler as the handler to call when there is a possibly unhandled rejection.
+            The default handler logs the error stack to stderr or console.error in browsers.
+            Passing no value or a non-function will have the effect of removing any kind of handling for possibly unhandled rejections.
+            Note: this hook is specific to the bluebird instance its called on, application developers should use global rejection events.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.onPossiblyUnhandledRejection(Retyped.bluebird.Bluebird{`0}.onPossiblyUnhandledRejectionFn2)">
+            <summary>
+            Add handler as the handler to call when there is a possibly unhandled rejection.
+            The default handler logs the error stack to stderr or console.error in browsers.
+            Passing no value or a non-function will have the effect of removing any kind of handling for possibly unhandled rejections.
+            Note: this hook is specific to the bluebird instance its called on, application developers should use global rejection events.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.all_Static``5(Bridge.Sequence{Bridge.Union{Retyped.es5.PromiseLike{``0},``0},Bridge.Union{Retyped.es5.PromiseLike{``1},``1},Bridge.Union{Retyped.es5.PromiseLike{``2},``2},Bridge.Union{Retyped.es5.PromiseLike{``3},``3},Bridge.Union{Retyped.es5.PromiseLike{``4},``4}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled when all the items in the array are fulfilled.
+            The promise's fulfillment value is an array with fulfillment values at respective positions to the original array.
+            If any promise in the array rejects, the returned promise is rejected with the rejection reason.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.all_Static``4(Bridge.Sequence{Bridge.Union{Retyped.es5.PromiseLike{``0},``0},Bridge.Union{Retyped.es5.PromiseLike{``1},``1},Bridge.Union{Retyped.es5.PromiseLike{``2},``2},Bridge.Union{Retyped.es5.PromiseLike{``3},``3}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled when all the items in the array are fulfilled.
+            The promise's fulfillment value is an array with fulfillment values at respective positions to the original array.
+            If any promise in the array rejects, the returned promise is rejected with the rejection reason.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.all_Static``3(Bridge.Sequence{Bridge.Union{Retyped.es5.PromiseLike{``0},``0},Bridge.Union{Retyped.es5.PromiseLike{``1},``1},Bridge.Union{Retyped.es5.PromiseLike{``2},``2}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled when all the items in the array are fulfilled.
+            The promise's fulfillment value is an array with fulfillment values at respective positions to the original array.
+            If any promise in the array rejects, the returned promise is rejected with the rejection reason.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.all_Static``2(Bridge.Sequence{Bridge.Union{Retyped.es5.PromiseLike{``0},``0},Bridge.Union{Retyped.es5.PromiseLike{``1},``1}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled when all the items in the array are fulfilled.
+            The promise's fulfillment value is an array with fulfillment values at respective positions to the original array.
+            If any promise in the array rejects, the returned promise is rejected with the rejection reason.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.all_Static``1(Bridge.Sequence{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled when all the items in the array are fulfilled.
+            The promise's fulfillment value is an array with fulfillment values at respective positions to the original array.
+            If any promise in the array rejects, the returned promise is rejected with the rejection reason.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.props_Static``2(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_collection.Map{``0,Bridge.Union{Retyped.es5.PromiseLike{``1},``1}}},Retyped.es2015_collection.Map{``0,Bridge.Union{Retyped.es5.PromiseLike{``1},``1}}})">
+            <summary>
+            Like ``Promise.all`` but for object properties instead of array items. Returns a promise that is fulfilled when all the properties of the object are fulfilled.
+            The promise's fulfillment value is an object with fulfillment values at respective keys to the original object.
+            If any promise in the object rejects, the returned promise is rejected with the rejection reason.
+            If `object` is a trusted `Promise`, then it will be treated as a promise for object rather than for its properties.
+            All other objects are treated for their properties as is returned by `Object.keys` - the object's own enumerable properties.
+            *The original object is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.props_Static``2(Retyped.es5.PromiseLike{Retyped.es2015_collection.Map{``0,Bridge.Union{Retyped.es5.PromiseLike{``1},``1}}})">
+            <summary>
+            Like ``Promise.all`` but for object properties instead of array items. Returns a promise that is fulfilled when all the properties of the object are fulfilled.
+            The promise's fulfillment value is an object with fulfillment values at respective keys to the original object.
+            If any promise in the object rejects, the returned promise is rejected with the rejection reason.
+            If `object` is a trusted `Promise`, then it will be treated as a promise for object rather than for its properties.
+            All other objects are treated for their properties as is returned by `Object.keys` - the object's own enumerable properties.
+            *The original object is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.props_Static``2(Retyped.es2015_collection.Map{``0,Bridge.Union{Retyped.es5.PromiseLike{``1},``1}})">
+            <summary>
+            Like ``Promise.all`` but for object properties instead of array items. Returns a promise that is fulfilled when all the properties of the object are fulfilled.
+            The promise's fulfillment value is an object with fulfillment values at respective keys to the original object.
+            If any promise in the object rejects, the returned promise is rejected with the rejection reason.
+            If `object` is a trusted `Promise`, then it will be treated as a promise for object rather than for its properties.
+            All other objects are treated for their properties as is returned by `Object.keys` - the object's own enumerable properties.
+            *The original object is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.any_Static``1(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}})">
+            <summary>
+            Like `Promise.some()`, with 1 as `count`. However, if the promise fulfills, the fulfillment value is not an array of 1 but the value directly.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.any_Static``1(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}})">
+            <summary>
+            Like `Promise.some()`, with 1 as `count`. However, if the promise fulfills, the fulfillment value is not an array of 1 but the value directly.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.any_Static``1(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}})">
+            <summary>
+            Like `Promise.some()`, with 1 as `count`. However, if the promise fulfills, the fulfillment value is not an array of 1 but the value directly.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.race_Static``1(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled or rejected as soon as a promise in the array is fulfilled or rejected with the respective rejection reason or fulfillment value.
+            **Note** If you pass empty array or a sparse array with no values, or a promise/thenable for such, it will be forever pending.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.race_Static``1(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled or rejected as soon as a promise in the array is fulfilled or rejected with the respective rejection reason or fulfillment value.
+            **Note** If you pass empty array or a sparse array with no values, or a promise/thenable for such, it will be forever pending.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.race_Static``1(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}})">
+            <summary>
+            Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled or rejected as soon as a promise in the array is fulfilled or rejected with the respective rejection reason or fulfillment value.
+            **Note** If you pass empty array or a sparse array with no values, or a promise/thenable for such, it will be forever pending.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.some_Static``1(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},System.Double)">
+            <summary>
+            Initiate a competitive race between multiple promises or values (values will become immediately fulfilled promises).
+            When `count` amount of promises have been fulfilled, the returned promise is fulfilled with an array that contains the fulfillment values of the winners in order of resolution.
+            If too many promises are rejected so that the promise can never become fulfilled, it will be immediately rejected with an array of rejection reasons in the order they were thrown in.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.some_Static``1(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},System.Double)">
+            <summary>
+            Initiate a competitive race between multiple promises or values (values will become immediately fulfilled promises).
+            When `count` amount of promises have been fulfilled, the returned promise is fulfilled with an array that contains the fulfillment values of the winners in order of resolution.
+            If too many promises are rejected so that the promise can never become fulfilled, it will be immediately rejected with an array of rejection reasons in the order they were thrown in.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.some_Static``1(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},System.Double)">
+            <summary>
+            Initiate a competitive race between multiple promises or values (values will become immediately fulfilled promises).
+            When `count` amount of promises have been fulfilled, the returned promise is fulfilled with an array that contains the fulfillment values of the winners in order of resolution.
+            If too many promises are rejected so that the promise can never become fulfilled, it will be immediately rejected with an array of rejection reasons in the order they were thrown in.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``2(Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Retyped.bluebird.Bluebird{``0}.joinFn{``0,``1})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``2(``1,Retyped.bluebird.Bluebird{``0}.joinFn{``0,``1})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``2(Retyped.es5.PromiseLike{``1},Retyped.bluebird.Bluebird{``0}.joinFn{``0,``1})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``3(Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Retyped.bluebird.Bluebird{``0}.joinFn2{``0,``1,``2})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``3(``1,``2,Retyped.bluebird.Bluebird{``0}.joinFn2{``0,``1,``2})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``3(``1,Retyped.es5.PromiseLike{``2},Retyped.bluebird.Bluebird{``0}.joinFn2{``0,``1,``2})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``3(Retyped.es5.PromiseLike{``1},``2,Retyped.bluebird.Bluebird{``0}.joinFn2{``0,``1,``2})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``3(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.bluebird.Bluebird{``0}.joinFn2{``0,``1,``2})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(``1,``2,``3,Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(``1,``2,Retyped.es5.PromiseLike{``3},Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(``1,Retyped.es5.PromiseLike{``2},``3,Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(``1,Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(Retyped.es5.PromiseLike{``1},``2,``3,Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(Retyped.es5.PromiseLike{``1},``2,Retyped.es5.PromiseLike{``3},Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},``3,Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``4(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.bluebird.Bluebird{``0}.joinFn3{``0,``1,``2,``3})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,``2,``3,``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,``2,``3,Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,``2,Retyped.es5.PromiseLike{``3},``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,``2,Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,Retyped.es5.PromiseLike{``2},``3,``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,Retyped.es5.PromiseLike{``2},``3,Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(``1,Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},``2,``3,``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},``2,``3,Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},``2,Retyped.es5.PromiseLike{``3},``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},``2,Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},``3,``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},``3,Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},``4,Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``5(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.bluebird.Bluebird{``0}.joinFn4{``0,``1,``2,``3,``4})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,``3,``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,``3,``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,``3,Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,``3,Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,Retyped.es5.PromiseLike{``3},``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,Retyped.es5.PromiseLike{``3},``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,``2,Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},``3,``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},``3,``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},``3,Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},``3,Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(``1,Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,``3,``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,``3,``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,``3,Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,``3,Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,Retyped.es5.PromiseLike{``3},``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,Retyped.es5.PromiseLike{``3},``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},``2,Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},``3,``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},``3,``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},``3,Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},``3,Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},``4,``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},``4,Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},``5,Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <!-- Badly formed XML comment ignored for member "M:Retyped.bluebird.Bluebird`1.join``6(Retyped.es5.PromiseLike{``1},Retyped.es5.PromiseLike{``2},Retyped.es5.PromiseLike{``3},Retyped.es5.PromiseLike{``4},Retyped.es5.PromiseLike{``5},Retyped.bluebird.Bluebird{``0}.joinFn5{``0,``1,``2,``3,``4,``5})" -->
+        <member name="M:Retyped.bluebird.Bluebird`1.join``1(Bridge.Union{``0,Retyped.es5.PromiseLike{``0}}[])">
+            <summary>
+            @deprecated use .all instead
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.join``1(``0[])">
+            <summary>
+            @deprecated use .all instead
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.join``1(Retyped.es5.PromiseLike{``0}[])">
+            <summary>
+            @deprecated use .all instead
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map_Static``2(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.map_StaticFn{``0,``1})">
+            <summary>
+            Map an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `mapper` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the `mapper` function returns promises or thenables, the returned promise will wait for all the mapped results to be resolved as well.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map_Static``2(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.map_StaticFn{``0,``1})">
+            <summary>
+            Map an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `mapper` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the `mapper` function returns promises or thenables, the returned promise will wait for all the mapped results to be resolved as well.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map_Static``2(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.map_StaticFn{``0,``1})">
+            <summary>
+            Map an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `mapper` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the `mapper` function returns promises or thenables, the returned promise will wait for all the mapped results to be resolved as well.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map_Static``2(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.map_StaticFn{``0,``1},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Map an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `mapper` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the `mapper` function returns promises or thenables, the returned promise will wait for all the mapped results to be resolved as well.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map_Static``2(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.map_StaticFn{``0,``1},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Map an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `mapper` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the `mapper` function returns promises or thenables, the returned promise will wait for all the mapped results to be resolved as well.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.map_Static``2(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.map_StaticFn{``0,``1},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Map an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `mapper` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the `mapper` function returns promises or thenables, the returned promise will wait for all the mapped results to be resolved as well.
+            *The original array is not modified.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce_Static``2(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.reduce_StaticFn{``0,``1})">
+            <summary>
+            Reduce an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `reducer` function with the signature `(total, current, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the reducer function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            *The original array is not modified. If no `initialValue` is given and the array doesn't contain at least 2 items, the callback will not be called and `undefined` is returned.
+            If `initialValue` is given and the array doesn't have at least 1 item, `initialValue` is returned.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce_Static``2(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.reduce_StaticFn{``0,``1})">
+            <summary>
+            Reduce an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `reducer` function with the signature `(total, current, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the reducer function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            *The original array is not modified. If no `initialValue` is given and the array doesn't contain at least 2 items, the callback will not be called and `undefined` is returned.
+            If `initialValue` is given and the array doesn't have at least 1 item, `initialValue` is returned.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce_Static``2(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.reduce_StaticFn{``0,``1})">
+            <summary>
+            Reduce an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `reducer` function with the signature `(total, current, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the reducer function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            *The original array is not modified. If no `initialValue` is given and the array doesn't contain at least 2 items, the callback will not be called and `undefined` is returned.
+            If `initialValue` is given and the array doesn't have at least 1 item, `initialValue` is returned.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce_Static``2(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.reduce_StaticFn{``0,``1},``1)">
+            <summary>
+            Reduce an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `reducer` function with the signature `(total, current, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the reducer function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            *The original array is not modified. If no `initialValue` is given and the array doesn't contain at least 2 items, the callback will not be called and `undefined` is returned.
+            If `initialValue` is given and the array doesn't have at least 1 item, `initialValue` is returned.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce_Static``2(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.reduce_StaticFn{``0,``1},``1)">
+            <summary>
+            Reduce an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `reducer` function with the signature `(total, current, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the reducer function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            *The original array is not modified. If no `initialValue` is given and the array doesn't contain at least 2 items, the callback will not be called and `undefined` is returned.
+            If `initialValue` is given and the array doesn't have at least 1 item, `initialValue` is returned.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.reduce_Static``2(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.reduce_StaticFn{``0,``1},``1)">
+            <summary>
+            Reduce an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `reducer` function with the signature `(total, current, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            If the reducer function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            *The original array is not modified. If no `initialValue` is given and the array doesn't contain at least 2 items, the callback will not be called and `undefined` is returned.
+            If `initialValue` is given and the array doesn't have at least 1 item, `initialValue` is returned.*
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter_Static``1(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.filter_StaticFn{``0})">
+            <summary>
+            Filter an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `filterer` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            The return values from the filtered functions are coerced to booleans, with the exception of promises and thenables which are awaited for their eventual result.
+            *The original array is not modified.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter_Static``1(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.filter_StaticFn{``0})">
+            <summary>
+            Filter an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `filterer` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            The return values from the filtered functions are coerced to booleans, with the exception of promises and thenables which are awaited for their eventual result.
+            *The original array is not modified.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter_Static``1(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.filter_StaticFn{``0})">
+            <summary>
+            Filter an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `filterer` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            The return values from the filtered functions are coerced to booleans, with the exception of promises and thenables which are awaited for their eventual result.
+            *The original array is not modified.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter_Static``1(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.filter_StaticFn{``0},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Filter an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `filterer` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            The return values from the filtered functions are coerced to booleans, with the exception of promises and thenables which are awaited for their eventual result.
+            *The original array is not modified.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter_Static``1(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.filter_StaticFn{``0},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Filter an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `filterer` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            The return values from the filtered functions are coerced to booleans, with the exception of promises and thenables which are awaited for their eventual result.
+            *The original array is not modified.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.filter_Static``1(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.filter_StaticFn{``0},Retyped.bluebird.Bluebird.ConcurrencyOption)">
+            <summary>
+            Filter an array, or a promise of an array, which contains a promises (or a mix of promises and values) with the given `filterer` function with the signature `(item, index, arrayLength)` where `item` is the resolved value of a respective promise in the input array.
+            If any promise in the input array is rejected the returned promise is rejected as well.
+            The return values from the filtered functions are coerced to booleans, with the exception of promises and thenables which are awaited for their eventual result.
+            *The original array is not modified.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.each_Static``2(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.each_StaticFn{``0,``1})">
+            <summary>
+            Iterate over an array, or a promise of an array, which contains promises (or a mix of promises and values) with the given iterator function with the signature (item, index, value) where item is the resolved value of a respective promise in the input array.
+            Iteration happens serially. If any promise in the input array is rejected the returned promise is rejected as well.
+            Resolves to the original array unmodified, this method is meant to be used for side effects.
+            If the iterator function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.each_Static``2(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.each_StaticFn{``0,``1})">
+            <summary>
+            Iterate over an array, or a promise of an array, which contains promises (or a mix of promises and values) with the given iterator function with the signature (item, index, value) where item is the resolved value of a respective promise in the input array.
+            Iteration happens serially. If any promise in the input array is rejected the returned promise is rejected as well.
+            Resolves to the original array unmodified, this method is meant to be used for side effects.
+            If the iterator function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.each_Static``2(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.each_StaticFn{``0,``1})">
+            <summary>
+            Iterate over an array, or a promise of an array, which contains promises (or a mix of promises and values) with the given iterator function with the signature (item, index, value) where item is the resolved value of a respective promise in the input array.
+            Iteration happens serially. If any promise in the input array is rejected the returned promise is rejected as well.
+            Resolves to the original array unmodified, this method is meant to be used for side effects.
+            If the iterator function returns a promise or a thenable, the result for the promise is awaited for before continuing with next iteration.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.mapSeries_Static``2(Bridge.Union{Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.mapSeries_StaticFn{``0,``1})">
+            <summary>
+            Given an Iterable(arrays are Iterable), or a promise of an Iterable, which produces promises (or a mix of promises and values), iterate over all the values in the Iterable into an array and iterate over the array serially, in-order.
+            Returns a promise for an array that contains the values returned by the iterator function in their respective positions.
+            The iterator won't be called for an item until its previous item, and the promise returned by the iterator for that item are fulfilled.
+            This results in a mapSeries kind of utility but it can also be used simply as a side effect iterator similar to Array#forEach.
+            If any promise in the input array is rejected or any promise returned by the iterator function is rejected, the result will be rejected as well.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.mapSeries_Static``2(Retyped.es5.PromiseLike{Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}}},Retyped.bluebird.Bluebird{``0}.mapSeries_StaticFn{``0,``1})">
+            <summary>
+            Given an Iterable(arrays are Iterable), or a promise of an Iterable, which produces promises (or a mix of promises and values), iterate over all the values in the Iterable into an array and iterate over the array serially, in-order.
+            Returns a promise for an array that contains the values returned by the iterator function in their respective positions.
+            The iterator won't be called for an item until its previous item, and the promise returned by the iterator for that item are fulfilled.
+            This results in a mapSeries kind of utility but it can also be used simply as a side effect iterator similar to Array#forEach.
+            If any promise in the input array is rejected or any promise returned by the iterator function is rejected, the result will be rejected as well.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.mapSeries_Static``2(Retyped.es2015_iterable.Iterable{Bridge.Union{Retyped.es5.PromiseLike{``0},``0}},Retyped.bluebird.Bluebird{``0}.mapSeries_StaticFn{``0,``1})">
+            <summary>
+            Given an Iterable(arrays are Iterable), or a promise of an Iterable, which produces promises (or a mix of promises and values), iterate over all the values in the Iterable into an array and iterate over the array serially, in-order.
+            Returns a promise for an array that contains the values returned by the iterator function in their respective positions.
+            The iterator won't be called for an item until its previous item, and the promise returned by the iterator for that item are fulfilled.
+            This results in a mapSeries kind of utility but it can also be used simply as a side effect iterator similar to Array#forEach.
+            If any promise in the input array is rejected or any promise returned by the iterator function is rejected, the result will be rejected as well.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.disposer(Retyped.bluebird.Bluebird{`0}.disposerFn)">
+            <summary>
+            A meta method used to specify the disposer method that cleans up a resource when using `Promise.using`.
+            Returns a Disposer object which encapsulates both the resource as well as the method to clean it up.
+            The user can pass this object to `Promise.using` to get access to the resource when it becomes available,
+            as well as to ensure its automatically cleaned up.
+            The second argument passed to a disposer is the result promise of the using block, which you can
+            inspect synchronously.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.using``2(Retyped.bluebird.Bluebird.Disposer{``0},Retyped.bluebird.Bluebird{``0}.usingFn{``0,``1})">
+            <summary>
+            In conjunction with `.disposer`, using will make sure that no matter what, the specified disposer
+            will be called when the promise returned by the callback passed to using has settled. The disposer is
+            necessary because there is no standard interface in node for disposing resources.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.using``3(Retyped.bluebird.Bluebird.Disposer{``0},Retyped.bluebird.Bluebird.Disposer{``1},Retyped.bluebird.Bluebird{`0}.usingFn2{``0,``1,``2})">
+            <summary>
+            In conjunction with `.disposer`, using will make sure that no matter what, the specified disposer
+            will be called when the promise returned by the callback passed to using has settled. The disposer is
+            necessary because there is no standard interface in node for disposing resources.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.using``4(Retyped.bluebird.Bluebird.Disposer{``0},Retyped.bluebird.Bluebird.Disposer{``1},Retyped.bluebird.Bluebird.Disposer{``2},Retyped.bluebird.Bluebird{`0}.usingFn3{``0,``1,``2,``3})">
+            <summary>
+            In conjunction with `.disposer`, using will make sure that no matter what, the specified disposer
+            will be called when the promise returned by the callback passed to using has settled. The disposer is
+            necessary because there is no standard interface in node for disposing resources.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird`1.config(Retyped.bluebird.Bluebird{`0}.configConfig)">
+            <summary>
+            Configure long stack traces, warnings, monitoring and cancellation.
+            Note that even though false is the default here, a development environment might be detected which automatically
+            enables long stack traces and warnings.
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.Promise">
+            <summary>
+            Create a new promise. The passed in function will receive functions `resolve` and `reject` as its arguments which can be called to seal the fate of the created promise.
+            If promise cancellation is enabled, passed in function will receive one more function argument `onCancel` that allows to register an optional cancellation callback.
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.version">
+            <summary>
+            The version number of the library
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.configConfig.warnings">
+            <summary>
+            Enable warnings
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.configConfig.longStackTraces">
+            <summary>
+            Enable long stack traces
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.configConfig.cancellation">
+            <summary>
+            Enable cancellation
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.configConfig.monitoring">
+            <summary>
+            Enable monitoring
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird`1.configConfig.warningsConfig.wForgottenReturn">
+            <summary>
+            Enables all warnings except forgotten return statements.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.getNewLibraryCopy">
+            <summary>
+            Returns a new independent copy of the Bluebird library.
+            This method should be used before you use any of the methods which would otherwise alter the global Bluebird object - to avoid polluting global state.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.noConflict">
+            <summary>
+            This is relevant to browser environments with no module loader.
+            Release control of the Promise namespace to whatever it was before this library was loaded. Returns a reference to the library namespace so you can attach it to something else.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.setScheduler(Retyped.bluebird.Bluebird.setSchedulerFn)">
+            <summary>
+            Changes how bluebird schedules calls a-synchronously.
+            </summary>
+            <param name = "scheduler">
+            Should be a function that asynchronously schedules
+            the calling of the passed in function
+            </param>
+        </member>
+        <member name="T:Retyped.bluebird.Bluebird.OperationalError">
+            <summary>
+            Represents an error is an explicit promise rejection as opposed to a thrown error.
+            For example, if an error is errbacked by a callback API promisified through undefined or undefined
+            and is not a typed error, it will be converted to a `OperationalError` which has the original error in
+            the `.cause` property.
+            `OperationalError`s are caught in `.error` handlers.
+            </summary>
+        </member>
+        <member name="T:Retyped.bluebird.Bluebird.TimeoutError">
+            <summary>
+            Signals that an operation has timed out. Used as a custom cancellation reason in `.timeout`.
+            </summary>
+        </member>
+        <member name="T:Retyped.bluebird.Bluebird.CancellationError">
+            <summary>
+            Signals that an operation has been aborted or cancelled. The default reason used by `.cancel`.
+            </summary>
+        </member>
+        <member name="T:Retyped.bluebird.Bluebird.AggregateError">
+            <summary>
+            A collection of errors. `AggregateError` is an array-like object, with numeric indices and a `.length` property.
+            It supports all generic array methods such as `.forEach` directly.
+            `AggregateError`s are caught in `.error` handlers, even if the contained errors are not operational.
+            `Promise.some` and `Promise.any` use `AggregateError` as rejection reason when they fail.
+            </summary>
+        </member>
+        <member name="T:Retyped.bluebird.Bluebird.Disposer`1">
+            <summary>
+            returned by `Bluebird.disposer()`.
+            </summary>
+        </member>
+        <member name="P:Retyped.bluebird.Bluebird.Resolver`1.promise">
+            <summary>
+            Returns a reference to the controlled promise that can be passed to clients.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Resolver`1.resolve(`0)">
+            <summary>
+            Resolve the underlying promise with `value` as the resolution value. If `value` is a thenable or a promise, the underlying promise will assume its state.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Resolver`1.resolve">
+            <summary>
+            Resolve the underlying promise with `value` as the resolution value. If `value` is a thenable or a promise, the underlying promise will assume its state.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Resolver`1.reject(System.Object)">
+            <summary>
+            Reject the underlying promise with `reason` as the rejection reason.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Resolver`1.callback(System.Object,`0,`0[])">
+            <summary>
+            Gives you a callback representation of the `PromiseResolver`. Note that this is not a method but a property.
+            The callback accepts error object in first argument and success values on the 2nd parameter and the rest, I.E. node js conventions.
+            If the the callback is called with multiple success values, the resolver fulfills its promise with an array of the values.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Inspection`1.isFulfilled">
+            <summary>
+            See if the underlying promise was fulfilled at the creation time of this inspection object.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Inspection`1.isRejected">
+            <summary>
+            See if the underlying promise was rejected at the creation time of this inspection object.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Inspection`1.isCancelled">
+            <summary>
+            See if the underlying promise was cancelled at the creation time of this inspection object.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Inspection`1.isPending">
+            <summary>
+            See if the underlying promise was defer at the creation time of this inspection object.
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Inspection`1.value">
+            <summary>
+            Get the fulfillment value of the underlying promise. Throws if the promise wasn't fulfilled at the creation time of this inspection object.
+            throws `TypeError`
+            </summary>
+        </member>
+        <member name="M:Retyped.bluebird.Bluebird.Inspection`1.reason">
+            <summary>
+            Get the rejection reason for the underlying promise. Throws if the promise wasn't rejected at the creation time of this inspection object.
+            throws `TypeError`
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Retyped.bluebird.Bluebird.Thenable`1" -->
+    </members>
+</doc>

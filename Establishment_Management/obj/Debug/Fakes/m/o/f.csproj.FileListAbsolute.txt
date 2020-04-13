@@ -1,0 +1,2 @@
+C:\Users\jayda\Source\Repos\F_Menu\F_Menu\obj\Debug\Fakes\m\o\f.csprojResolveAssemblyReference.cache
+C:\Users\jayda\Source\Repos\F_Menu\F_Menu\obj\Debug\Fakes\m\o\f.csproj.CoreCompileInputs.cache

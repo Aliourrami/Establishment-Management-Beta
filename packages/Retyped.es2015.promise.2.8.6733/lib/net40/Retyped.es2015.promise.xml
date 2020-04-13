@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Retyped.es2015.promise</name>
+    </assembly>
+    <members>
+        <member name="P:Retyped.es2015_promise.PromiseConstructor.prototype">
+            <summary>
+            A reference to the prototype.
+            </summary>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.New``1(Retyped.es2015_promise.PromiseConstructor.NewFn{``0})">
+            <summary>
+            Creates a new Promise.
+            and a reject callback used to reject the promise with a provided reason or error.
+            </summary>
+            <param name = "executor">
+            A callback used to initialize the promise. This callback is passed two arguments:
+            a resolve callback used resolve the promise with a value or the result of another promise,
+            </param>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``10(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}},Bridge.Union{``7,Retyped.es5.PromiseLike{``7}},Bridge.Union{``8,Retyped.es5.PromiseLike{``8}},Bridge.Union{``9,Retyped.es5.PromiseLike{``9}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``9(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}},Bridge.Union{``7,Retyped.es5.PromiseLike{``7}},Bridge.Union{``8,Retyped.es5.PromiseLike{``8}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``8(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}},Bridge.Union{``7,Retyped.es5.PromiseLike{``7}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``7(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``6(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``5(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``4(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``3(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``2(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}}})">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``1(Bridge.Union{``0,Retyped.es5.PromiseLike{``0}}[])">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``1(``0[])">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.all``1(Retyped.es5.PromiseLike{``0}[])">
+            <summary>
+            Creates a Promise that is resolved with an array of results when all of the provided Promises
+            resolve, or rejected when any Promise is rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``10(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}},Bridge.Union{``7,Retyped.es5.PromiseLike{``7}},Bridge.Union{``8,Retyped.es5.PromiseLike{``8}},Bridge.Union{``9,Retyped.es5.PromiseLike{``9}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``9(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}},Bridge.Union{``7,Retyped.es5.PromiseLike{``7}},Bridge.Union{``8,Retyped.es5.PromiseLike{``8}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``8(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}},Bridge.Union{``7,Retyped.es5.PromiseLike{``7}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``7(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}},Bridge.Union{``6,Retyped.es5.PromiseLike{``6}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``6(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}},Bridge.Union{``5,Retyped.es5.PromiseLike{``5}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``5(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}},Bridge.Union{``4,Retyped.es5.PromiseLike{``4}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``4(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}},Bridge.Union{``3,Retyped.es5.PromiseLike{``3}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``3(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}},Bridge.Union{``2,Retyped.es5.PromiseLike{``2}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``2(Bridge.Sequence{Bridge.Union{``0,Retyped.es5.PromiseLike{``0}},Bridge.Union{``1,Retyped.es5.PromiseLike{``1}}})">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``1(Bridge.Union{``0,Retyped.es5.PromiseLike{``0}}[])">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``1(``0[])">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.race``1(Retyped.es5.PromiseLike{``0}[])">
+            <summary>
+            Creates a Promise that is resolved or rejected when any of the provided Promises are resolved
+            or rejected.
+            </summary>
+            <param name = "values">An array of Promises.</param>
+            <returns>A new Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.reject(System.Object)">
+            <summary>
+            Creates a new rejected promise for the provided reason.
+            </summary>
+            <param name = "reason">The reason the promise was rejected.</param>
+            <returns>A new rejected Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.reject``1(System.Object)">
+            <summary>
+            Creates a new rejected promise for the provided reason.
+            </summary>
+            <param name = "reason">The reason the promise was rejected.</param>
+            <returns>A new rejected Promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.resolve``1(Bridge.Union{``0,Retyped.es5.PromiseLike{``0}})">
+            <summary>
+            Creates a new resolved promise for the provided value.
+            </summary>
+            <param name = "value">A promise.</param>
+            <returns>A promise whose internal state matches the provided promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.resolve``1(``0)">
+            <summary>
+            Creates a new resolved promise for the provided value.
+            </summary>
+            <param name = "value">A promise.</param>
+            <returns>A promise whose internal state matches the provided promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.resolve``1(Retyped.es5.PromiseLike{``0})">
+            <summary>
+            Creates a new resolved promise for the provided value.
+            </summary>
+            <param name = "value">A promise.</param>
+            <returns>A promise whose internal state matches the provided promise.</returns>
+        </member>
+        <member name="M:Retyped.es2015_promise.PromiseConstructor.resolve">
+            <summary>
+            Creates a new resolved promise .
+            </summary>
+            <returns>A resolved promise.</returns>
+        </member>
+    </members>
+</doc>

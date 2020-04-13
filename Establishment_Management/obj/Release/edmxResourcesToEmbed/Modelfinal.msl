@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GestionEFP_FinalModelStoreContainer" CdmEntityContainer="GestionEFP_FinalEntities1">
+    <EntitySetMapping Name="Affectation">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.Affectation">
+        <MappingFragment StoreEntitySet="Affectation">
+          <ScalarProperty Name="numAff" ColumnName="numAff" />
+          <ScalarProperty Name="numGrp" ColumnName="numGrp" />
+          <ScalarProperty Name="numFlr" ColumnName="numFlr" />
+          <ScalarProperty Name="numMdl" ColumnName="numMdl" />
+          <ScalarProperty Name="numFrm" ColumnName="numFrm" />
+          <ScalarProperty Name="dateAff" ColumnName="dateAff" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EFM_Planification">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.EFM_Planification">
+        <MappingFragment StoreEntitySet="EFM_Planification">
+          <ScalarProperty Name="numMdl" ColumnName="numMdl" />
+          <ScalarProperty Name="numFlr" ColumnName="numFlr" />
+          <ScalarProperty Name="numGrp" ColumnName="numGrp" />
+          <ScalarProperty Name="date_prevue" ColumnName="date_prevue" />
+          <ScalarProperty Name="date_efective" ColumnName="date_efective" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Filiere">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.Filiere">
+        <MappingFragment StoreEntitySet="Filiere">
+          <ScalarProperty Name="numFlr" ColumnName="numFlr" />
+          <ScalarProperty Name="nomFlr" ColumnName="nomFlr" />
+          <ScalarProperty Name="niveauFlr" ColumnName="niveauFlr" />
+          <ScalarProperty Name="typeFlr" ColumnName="typeFlr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formateur">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.Formateur">
+        <MappingFragment StoreEntitySet="Formateur">
+          <ScalarProperty Name="numfrm" ColumnName="numfrm" />
+          <ScalarProperty Name="matricule" ColumnName="matricule" />
+          <ScalarProperty Name="cin" ColumnName="cin" />
+          <ScalarProperty Name="nomfrm" ColumnName="nomfrm" />
+          <ScalarProperty Name="prenomfrm" ColumnName="prenomfrm" />
+          <ScalarProperty Name="dateN" ColumnName="dateN" />
+          <ScalarProperty Name="dateEmbauche" ColumnName="dateEmbauche" />
+          <ScalarProperty Name="grade" ColumnName="grade" />
+          <ScalarProperty Name="statut" ColumnName="statut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groupe">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.Groupe">
+        <MappingFragment StoreEntitySet="Groupe">
+          <ScalarProperty Name="numGrp" ColumnName="numGrp" />
+          <ScalarProperty Name="nomGrp" ColumnName="nomGrp" />
+          <ScalarProperty Name="numflr" ColumnName="numflr" />
+          <ScalarProperty Name="anneeGrp" ColumnName="anneeGrp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Module">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.Module">
+        <MappingFragment StoreEntitySet="Module">
+          <ScalarProperty Name="numMdl" ColumnName="numMdl" />
+          <ScalarProperty Name="numflr" ColumnName="numflr" />
+          <ScalarProperty Name="anneeMdl" ColumnName="anneeMdl" />
+          <ScalarProperty Name="nomMdl" ColumnName="nomMdl" />
+          <ScalarProperty Name="MH" ColumnName="MH" />
+          <ScalarProperty Name="coeficientMdl" ColumnName="coeficientMdl" />
+          <ScalarProperty Name="semestreMdl" ColumnName="semestreMdl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seance">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.Seance">
+        <MappingFragment StoreEntitySet="Seance">
+          <ScalarProperty Name="numSc" ColumnName="numSc" />
+          <ScalarProperty Name="numAff" ColumnName="numAff" />
+          <ScalarProperty Name="dateSc" ColumnName="dateSc" />
+          <ScalarProperty Name="duree" ColumnName="duree" />
+          <ScalarProperty Name="salle" ColumnName="salle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stagaire">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.Stagaire">
+        <MappingFragment StoreEntitySet="Stagaire">
+          <ScalarProperty Name="numStg" ColumnName="numStg" />
+          <ScalarProperty Name="nomStg" ColumnName="nomStg" />
+          <ScalarProperty Name="prenomStg" ColumnName="prenomStg" />
+          <ScalarProperty Name="dateNStg" ColumnName="dateNStg" />
+          <ScalarProperty Name="numGrp" ColumnName="numGrp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="GestionEFP_FinalModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Absence" TypeName="GestionEFP_FinalModel.Absence" StoreEntitySet="Absence">
+      <EndProperty Name="Seance">
+        <ScalarProperty Name="numSc" ColumnName="numSc" />
+      </EndProperty>
+      <EndProperty Name="Stagaire">
+        <ScalarProperty Name="numStg" ColumnName="NumStg" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="GestionEFP_FinalModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="GestionEFP_FinalModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="GestionEFP_FinalModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="GestionEFP_FinalModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GestionEFP_FinalModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="GestionEFP_FinalModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GestionEFP_FinalModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="GestionEFP_FinalModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="GestionEFP_FinalModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
