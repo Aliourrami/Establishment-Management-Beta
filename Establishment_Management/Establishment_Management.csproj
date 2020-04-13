@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E464AE66-3CBD-4B15-8158-1C70A550FBB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Establishment_Management</RootNamespace>
+    <AssemblyName>Establishment Management</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>EstablishmentManagement.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Establishment_Management.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\OneDrive\Bureau\New folder\TDI 2éme\C#\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\gggggg\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\gggggg\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\packages\MaterialSkin.Net4.1.0.0\lib\net40\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System">
+      <Private>True</Private>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Affectation.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFM_Planification.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Emploi_Temps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emploi_Temps.Designer.cs">
+      <DependentUpon>Emploi_Temps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filiere.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Formateur.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="F_Absence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Absence.Designer.cs">
+      <DependentUpon>F_Absence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Affectation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Affectation.Designer.cs">
+      <DependentUpon>F_Affectation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Afficher_Stagaire_Par_Groupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Afficher_Stagaire_Par_Groupe.Designer.cs">
+      <DependentUpon>F_Afficher_Stagaire_Par_Groupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_EFM_Planification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_EFM_Planification.Designer.cs">
+      <DependentUpon>F_EFM_Planification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_FiliereEtGroupeParFormateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_FiliereEtGroupeParFormateur.Designer.cs">
+      <DependentUpon>F_FiliereEtGroupeParFormateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Groupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Groupe.Designer.cs">
+      <DependentUpon>F_Groupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_imprimer_click_button.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_imprimer_click_button.Designer.cs">
+      <DependentUpon>F_imprimer_click_button.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Main.Designer.cs">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Filiere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Filiere.Designer.cs">
+      <DependentUpon>F_Filiere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Formateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Formateur.Designer.cs">
+      <DependentUpon>F_Formateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Module.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Module.Designer.cs">
+      <DependentUpon>F_Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Seance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Seance.Designer.cs">
+      <DependentUpon>F_Seance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Stagaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Stagaire.Designer.cs">
+      <DependentUpon>F_Stagaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groupe.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="F_Imprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Imprimer.Designer.cs">
+      <DependentUpon>F_Imprimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imprimer\AbsenceStagaire.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbsenceStagaire.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Imprimer\AttestationStagaire.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttestationStagaire.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Imprimer\EFM_Plan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFM_Plan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modelefpfinal.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelefpfinal.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelefpfinal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelefpfinal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelefpfinal.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Module.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seance.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Spalsh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spalsh.Designer.cs">
+      <DependentUpon>Spalsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stagaire.cs">
+      <DependentUpon>Modelefpfinal.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Emploi_Temps.resx">
+      <DependentUpon>Emploi_Temps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Absence.resx">
+      <DependentUpon>F_Absence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Affectation.resx">
+      <DependentUpon>F_Affectation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Afficher_Stagaire_Par_Groupe.resx">
+      <DependentUpon>F_Afficher_Stagaire_Par_Groupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_EFM_Planification.resx">
+      <DependentUpon>F_EFM_Planification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_FiliereEtGroupeParFormateur.resx">
+      <DependentUpon>F_FiliereEtGroupeParFormateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Groupe.en-US.resx">
+      <DependentUpon>F_Groupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Groupe.resx">
+      <DependentUpon>F_Groupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Groupe.tzm-Arab-MA.resx">
+      <DependentUpon>F_Groupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_imprimer_click_button.resx">
+      <DependentUpon>F_imprimer_click_button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Main.resx">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Filiere.resx">
+      <DependentUpon>F_Filiere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Formateur.resx">
+      <DependentUpon>F_Formateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Module.resx">
+      <DependentUpon>F_Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Seance.resx">
+      <DependentUpon>F_Seance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Stagaire.resx">
+      <DependentUpon>F_Stagaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Imprimer.resx">
+      <DependentUpon>F_Imprimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imprimer\AbsenceStagaire.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AbsenceStagaire.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imprimer\AttestationStagaire.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttestationStagaire.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imprimer\EFM_Plan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EFM_Plan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Spalsh.resx">
+      <DependentUpon>Spalsh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Modelefpfinal.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Modelefpfinal.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelefpfinal.edmx.diagram">
+      <DependentUpon>Modelefpfinal.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Establishment Management.ico" />
+    <Content Include="EstablishmentManagement.ico" />
+    <Content Include="etablissement.ico" />
+    <Content Include="Modelefpfinal.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelefpfinal.edmx</DependentUpon>
+      <LastGenOutput>Modelefpfinal.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelefpfinal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelefpfinal.edmx</DependentUpon>
+      <LastGenOutput>Modelefpfinal.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\iconfinder_calendar2_497220.png" />
+    <Content Include="Resources\imprimer-png-2.png" />
+    <Content Include="Resources\vippng.com-us-marines-png-1045847.png" />
+    <None Include="Resources\vippng.com-us-marines-png-10458471.png" />
+    <None Include="Resources\imprimer-png-21.png" />
+    <None Include="Resources\ic_assignment_returned_128_28216.png" />
+    <None Include="Resources\icons8-attribuer-un-cours-641.png" />
+    <None Include="Resources\iconfinder_edit_3218 %281%29.png" />
+    <None Include="Resources\iconfinder_calendar2_4972201.png" />
+    <Content Include="Resources\iconfinder_edit_3218.ico" />
+    <None Include="Resources\iconfinder_Group_Meeting_Light_80844 %284%29.png" />
+    <Content Include="Resources\iconfinder_Group_Meeting_Light_80844 %287%29.png" />
+    <Content Include="Resources\iconfinder_Period_end_132159.png" />
+    <None Include="Resources\iconfinder_Period_end_1321591.png" />
+    <Content Include="Resources\iconfinder_Professor_131512.png" />
+    <None Include="Resources\iconfinder_Professor_1315121.png" />
+    <Content Include="Resources\iconfinder_Timetable_73226 %284%29.png" />
+    <None Include="Resources\iconfinder_Timetable_73226 %284%291.png" />
+    <Content Include="Resources\iconfinder_user-group-new_23632 %283%29.png" />
+    <None Include="Resources\iconfinder_user-group-new_23632 %283%291.png" />
+    <Content Include="Resources\iconfinder_website_-_clock_3440828 %284%29.png" />
+    <Content Include="Resources\icons8-attribuer-un-cours-64.png" />
+    <None Include="Resources\iconfinder_attendance_list_45546.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\MaterialSkin.Net4.1.0.0\lib\net40\MaterialSkin.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+</Project>
